@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="SVGCore">
+      <UniqueIdentifier>{a7a9b342-f2ad-4ebc-9946-2440aeb4578d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{5c19e2a7-f81a-43f5-9de7-08c1911224ed}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StringHash.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGGlobal.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGMatrix.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionHistory.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElement.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGDocument.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementShape.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementStyleable.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementStyleClass.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementStyle.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementRect.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementSVG.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementGradient.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementStop.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementLinearGradient.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementRadialGradient.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementCircle.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementEllipse.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementLine.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementG.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementPath.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGPathSeg.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementImage.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementPolygon.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementPolyline.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementText.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementTextContent.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementTspan.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementScript.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementSwitch.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementSymbol.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementClipPath.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementComment.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementDataSection.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementDefs.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementDoctype.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementUse.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementPattern.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGElementA.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="ElementMaker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolButtonColorMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolButtonComboxMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgPattern.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgInputName.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PanePropertyTableView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGLineF.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGRectF.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="SVGPointF.cpp">
+      <Filter>SVGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="TabWidgetEx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgGradient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LineEditEX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgAbout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCombox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TableWidgetEx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuRotate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FocusManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FocusForElement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgRotateSlider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NewFileView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuColor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_MainFrame.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_DlgAbout.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_LineEditEX.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="ui\UIGradient.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ui\UIPattern.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ui\UIInputName.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ui\UIAbout.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ui\UIRotateSlider.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="QtSVGEditor.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="StringHash.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGGlobal.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGDef.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGMatrix.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionHistory.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElement.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGDocument.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementShape.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementStyleable.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementStyleClass.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementStyle.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementRect.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementSVG.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementGradient.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementStop.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementLinearGradient.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementRadialGradient.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementCircle.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementEllipse.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementLine.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementG.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementPath.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGPathSeg.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementImage.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementPolygon.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementPolyline.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementText.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementTextContent.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementTspan.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementScript.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementSwitch.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementSymbol.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementClipPath.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementComment.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementDataSection.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementDefs.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementDoctype.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementUse.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementPattern.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGElementA.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="ElementMaker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGLineF.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGRectF.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SVGPointF.h">
+      <Filter>SVGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FocusManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FocusForElement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SVGEditor.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="DlgGradient.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DlgInputName.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DlgPattern.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DlgRotateSlider.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MenuColor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MenuCombox.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MenuRotate.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="NewFileView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="PanePropertyTableView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SVGView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="TableWidgetEx.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="TabWidgetEx.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ToolButtonColorMenu.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ToolButtonComboxMenu.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="MainFrame.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DlgAbout.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="LineEditEX.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

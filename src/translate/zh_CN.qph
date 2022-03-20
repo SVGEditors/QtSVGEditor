@@ -1,0 +1,395 @@
+<!DOCTYPE QPH>
+<QPH sourcelanguage="en" language="zh_CN">
+<phrase>
+    <source>File Bar</source>
+    <target>文件工具条</target>
+</phrase>
+<phrase>
+    <source>File</source>
+    <target>文件</target>
+</phrase>
+<phrase>
+    <source>File(&amp;F)</source>
+    <target>文件(&amp;F)</target>
+</phrase>
+<phrase>
+    <source>New(&amp;N)</source>
+    <target>新建(&amp;N)</target>
+</phrase>
+<phrase>
+    <source>Open</source>
+    <target>打开</target>
+</phrase>
+<phrase>
+    <source>Open(&amp;O)</source>
+    <target>打开(&amp;O)</target>
+</phrase>
+<phrase>
+    <source>Save</source>
+    <target>保存</target>
+</phrase>
+<phrase>
+    <source>Save(&amp;S)</source>
+    <target>保存(&amp;S)</target>
+</phrase>
+<phrase>
+    <source>Edit(&amp;E)</source>
+    <target>编辑(&amp;E)</target>
+</phrase>
+<phrase>
+    <source>Save As</source>
+    <target>另存为</target>
+</phrase>
+<phrase>
+    <source>Warning</source>
+    <target>警告</target>
+</phrase>
+<phrase>
+    <source>Export To Png</source>
+    <target>导出png</target>
+</phrase>
+<phrase>
+    <source>Export To Jpg</source>
+    <target>导出Jpg</target>
+</phrase>
+<phrase>
+    <source>Exit</source>
+    <target>退出</target>
+</phrase>
+<phrase>
+    <source>View</source>
+    <target>视图</target>
+</phrase>
+<phrase>
+    <source>View(&amp;V)</source>
+    <target>视图(&amp;V)</target>
+</phrase>
+<phrase>
+    <source>Property View</source>
+    <target>属性视图</target>
+</phrase>
+<phrase>
+    <source>Edit</source>
+    <target>编辑</target>
+</phrase>
+<phrase>
+    <source>Undo</source>
+    <target>撤销</target>
+</phrase>
+<phrase>
+    <source>Undo(&amp;U)</source>
+    <target>撤销(&amp;U)</target>
+</phrase>
+<phrase>
+    <source>Redo</source>
+    <target>反撤销</target>
+</phrase>
+<phrase>
+    <source>Redo(&amp;V)</source>
+    <target>反撤销(&amp;V)</target>
+</phrase>
+<phrase>
+    <source>Copy</source>
+    <target>复制</target>
+</phrase>
+<phrase>
+    <source>Copy(&amp;C)</source>
+    <target>复制(&amp;C)</target>
+</phrase>
+<phrase>
+    <source>Cancel</source>
+    <target>取消</target>
+</phrase>
+<phrase>
+    <source>Paste</source>
+    <target>粘贴</target>
+</phrase>
+<phrase>
+    <source>Paste(&amp;V)</source>
+    <target>粘贴(&amp;V)</target>
+</phrase>
+<phrase>
+    <source>Help</source>
+    <target>帮助</target>
+</phrase>
+<phrase>
+    <source>About</source>
+    <target>关于</target>
+</phrase>
+<phrase>
+    <source>Transparent</source>
+    <target>透明</target>
+</phrase>
+<phrase>
+    <source>More Color</source>
+    <target>更多颜色</target>
+</phrase>
+<phrase>
+    <source>Gradual</source>
+    <target>渐变色</target>
+</phrase>
+<phrase>
+    <source>Pattern</source>
+    <target>网纹</target>
+</phrase>
+<phrase>
+    <source>Line</source>
+    <target>直线</target>
+</phrase>
+<phrase>
+    <source>Rectangle</source>
+    <target>矩形</target>
+</phrase>
+<phrase>
+    <source>Circle</source>
+    <target>圆</target>
+</phrase>
+<phrase>
+    <source>Ellipse</source>
+    <target>椭圆</target>
+</phrase>
+<phrase>
+    <source>Polyline</source>
+    <target>折线</target>
+</phrase>
+<phrase>
+    <source>Polygon</source>
+    <target>多边形</target>
+</phrase>
+<phrase>
+    <source>Path</source>
+    <target>路径</target>
+</phrase>
+<phrase>
+    <source>Text</source>
+    <target>文本</target>
+</phrase>
+<phrase>
+    <source>Image</source>
+    <target>图片</target>
+</phrase>
+<phrase>
+    <source>Draw</source>
+    <target>绘制</target>
+</phrase>
+<phrase>
+    <source>Continue Draw</source>
+    <target>接着画</target>
+</phrase>
+<phrase>
+    <source>Mouse Arrow</source>
+    <target>鼠标</target>
+</phrase>
+<phrase>
+    <source>Restore</source>
+    <target>恢复</target>
+</phrase>
+<phrase>
+    <source>Zoom In</source>
+    <target>放大</target>
+</phrase>
+<phrase>
+    <source>Zoom Out</source>
+    <target>缩小</target>
+</phrase>
+<phrase>
+    <source>Move</source>
+    <target>平移</target>
+</phrase>
+<phrase>
+    <source>Rotate</source>
+    <target>旋转</target>
+</phrase>
+<phrase>
+    <source>Group</source>
+    <target>组合</target>
+</phrase>
+<phrase>
+    <source>Ungroup</source>
+    <target>取消组合</target>
+</phrase>
+<phrase>
+    <source>Move Top</source>
+    <target>置顶层</target>
+</phrase>
+<phrase>
+    <source>Move Bottom</source>
+    <target>置底层</target>
+</phrase>
+<phrase>
+    <source>Move Up</source>
+    <target>上移一层</target>
+</phrase>
+<phrase>
+    <source>Move Down</source>
+    <target>下移一层</target>
+</phrase>
+<phrase>
+    <source>Flip Horizontal</source>
+    <target>水平翻转</target>
+</phrase>
+<phrase>
+    <source>Flip Vertically</source>
+    <target>垂直翻转</target>
+</phrase>
+<phrase>
+    <source>Flip Right</source>
+    <target>向右翻转</target>
+</phrase>
+<phrase>
+    <source>Flip Left</source>
+    <target>向左翻转</target>
+</phrase>
+<phrase>
+    <source>The file has been changed. Do you want to save it?</source>
+    <target>文件已经变更,是否保存?</target>
+</phrase>
+<phrase>
+    <source>Align Top</source>
+    <target>上对齐</target>
+</phrase>
+<phrase>
+    <source>Align Bottom</source>
+    <target>下对齐</target>
+</phrase>
+<phrase>
+    <source>Align Left</source>
+    <target>左对齐</target>
+</phrase>
+<phrase>
+    <source>Align Right</source>
+    <target>右对齐</target>
+</phrase>
+<phrase>
+    <source>Align Vertically</source>
+    <target>垂直居中</target>
+</phrase>
+<phrase>
+    <source>Align Horizontal</source>
+    <target>水平居中</target>
+</phrase>
+<phrase>
+    <source>Consistent Horizontal Spacing</source>
+    <target>水平间距一致</target>
+</phrase>
+<phrase>
+    <source>Consistent Vertical Spacing</source>
+    <target>垂直间距一致</target>
+</phrase>
+<phrase>
+    <source>Consistent Width</source>
+    <target>宽度一致</target>
+</phrase>
+<phrase>
+    <source>Consistent Height</source>
+    <target>高度一致</target>
+</phrase>
+<phrase>
+    <source>Consistent Size</source>
+    <target>大小一致</target>
+</phrase>
+<phrase>
+    <source>Lock</source>
+    <target>锁住</target>
+</phrase>
+<phrase>
+    <source>Unlock</source>
+    <target>解锁</target>
+</phrase>
+<phrase>
+    <source>Show Rule</source>
+    <target>显示标尺</target>
+</phrase>
+<phrase>
+    <source>Show Grid</source>
+    <target>显示网格</target>
+</phrase>
+<phrase>
+    <source>File New</source>
+    <target>新建文件</target>
+</phrase>
+<phrase>
+    <source>Bold</source>
+    <target>加粗</target>
+</phrase>
+<phrase>
+    <source>Italics</source>
+    <target>斜体</target>
+</phrase>
+<phrase>
+    <source>Underline</source>
+    <target>下划线</target>
+</phrase>
+<phrase>
+    <source>Close Document</source>
+    <target>关闭文档</target>
+</phrase>
+<phrase>
+    <source>Close All Document</source>
+    <target>关闭所有文档</target>
+</phrase>
+<phrase>
+    <source>Close Right Document</source>
+    <target>关闭右边文档</target>
+</phrase>
+<phrase>
+    <source>Open directory</source>
+    <target>打开所在目录</target>
+</phrase>
+<phrase>
+    <source>Open with default program</source>
+    <target>用默认程序打开</target>
+</phrase>
+<phrase>
+    <source>Reload file</source>
+    <target>重新加载文件</target>
+</phrase>
+<phrase>
+    <source>Don't Save</source>
+    <target>不保存</target>
+</phrase>
+<phrase>
+    <source>Zoom</source>
+    <target>缩放</target>
+</phrase>
+<phrase>
+    <source>Font</source>
+    <target>字体</target>
+</phrase>
+<phrase>
+    <source>Align</source>
+    <target>对齐</target>
+</phrase>
+<phrase>
+    <source>Color</source>
+    <target>颜色</target>
+</phrase>
+<phrase>
+    <source>Canvas</source>
+    <target>画布</target>
+</phrase>
+<phrase>
+    <source>Help(&amp;H)</source>
+    <target>帮助(&amp;H)</target>
+</phrase>
+<phrase>
+    <source>About(&amp;A)</source>
+    <target>关于(&amp;A)</target>
+</phrase>
+<phrase>
+    <source>New File</source>
+    <target>新建文件</target>
+</phrase>
+<phrase>
+    <source>New File1</source>
+    <target>新建文件1</target>
+</phrase>
+<phrase>
+    <source>Open File...</source>
+    <target>打开文件...</target>
+</phrase>
+</QPH>
+
+
+
+

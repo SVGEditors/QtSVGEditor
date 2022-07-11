@@ -2,11 +2,11 @@
 *
 * @license MIT
 *
-* @copyright: 2022 LinJi
+* @copyright: 2022 LJ
 *
-* @technical support: www.svgsvg.cn
+* @technical support: http://www.svgsvg.cn/support/tech/
 *
-* @email: 93681992@qq.com
+
 *
 * @module: QtSVGEditor
 *
@@ -31,12 +31,12 @@ CDlgAbout::CDlgAbout()
 	m_ui.ButtonIcon->setIconSize(m_ui.ButtonIcon->size());
 	m_ui.ButtonIcon->setIcon(QIcon(":/images/windows32.png"));
 	QLabel *pLabel1 = new QLabel(tr("QtSVGEditor"), this);
-	pLabel1->setGeometry(QRect(100, 20, 200, 30));
-	QLabel *pLabel2 = new QLabel(tr("technical support:"), this);
-	pLabel2->setGeometry(QRect(100, 50, 300, 50));
+	pLabel1->setGeometry(QRect(100, 20, 450, 30));
+	QLabel *pLabel2 = new QLabel(QString::fromStdWString(L"技术支持:"), this);
+	pLabel2->setGeometry(QRect(100, 50, 450, 50));
 
 	QLabel* labelLink = new QLabel(this);
-	labelLink->setText(tr("<a style=\"font-size:14pt\" href=\"http://www.svgsvg.cn\">http://www.svgsvg.cn</a>"));
+	labelLink->setText("<a style=\"font-size:10pt\" href=\"http://www.svgsvg.cn/support/tech/\">http://www.svgsvg.cn/support/tech/</a>"));
 	labelLink->setGeometry(QRect(100, 80, 300, 50));
 
 	connect(m_ui.ButtonOK, SIGNAL(clicked()), this, SLOT(OnOK()));

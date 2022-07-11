@@ -2,11 +2,11 @@
 *
 * @license MIT
 *
-* @copyright: 2022 LinJi
+* @copyright: 2022 LJ
 *
-* @technical support: www.svgsvg.cn
+* @technical support: http://www.svgsvg.cn/support/tech/
 *
-* @email: 93681992@qq.com
+
 *
 * @module: QtSVGEditor
 *
@@ -757,7 +757,7 @@ float  CSVGGlobal::atof_3(const std::wstring &str)
 		if (strValue.length() > 0)
 		{
 			int nSqrt = QString::fromStdWString(strValue).toInt();
-			fval = fval*pow((float)10.0, nSqrt);
+			fval = fval * pow((float)10.0, nSqrt);
 		}
 	}
 	return fval;
@@ -906,26 +906,26 @@ CSVGPointF CSVGGlobal::GetParaPostion(const CSVGPointF & ptStart, const CSVGPoin
 	{
 	case 1:
 	{
-		GetPos.x = float(ptPos.x + dDistance*sin(digree));
-		GetPos.y = float(ptPos.y - dDistance*cos(digree));
+		GetPos.x = float(ptPos.x + dDistance * sin(digree));
+		GetPos.y = float(ptPos.y - dDistance * cos(digree));
 	}
 	break;
 	case 2:
 	{
-		GetPos.x = float(ptPos.x + dDistance*sin(digree));
-		GetPos.y = float(ptPos.y + dDistance*cos(digree));
+		GetPos.x = float(ptPos.x + dDistance * sin(digree));
+		GetPos.y = float(ptPos.y + dDistance * cos(digree));
 	}
 	break;
 	case 3:
 	{
-		GetPos.x = float(ptPos.x - dDistance*sin(digree));
-		GetPos.y = float(ptPos.y + dDistance*cos(digree));
+		GetPos.x = float(ptPos.x - dDistance * sin(digree));
+		GetPos.y = float(ptPos.y + dDistance * cos(digree));
 	}
 	break;
 	case 4:
 	{
-		GetPos.x = float(ptPos.x - dDistance*sin(digree));
-		GetPos.y = float(ptPos.y - dDistance*cos(digree));
+		GetPos.x = float(ptPos.x - dDistance * sin(digree));
+		GetPos.y = float(ptPos.y - dDistance * cos(digree));
 	}
 	break;
 	default:
@@ -954,26 +954,26 @@ CSVGPointF CSVGGlobal::GetPosInLine(const CSVGPointF & ptStart, const CSVGPointF
 	{
 	case 1:
 	{
-		GetPos.x = float(ptEnd.x - dDistance*cos(digree));
-		GetPos.y = float(ptEnd.y - dDistance*sin(digree));
+		GetPos.x = float(ptEnd.x - dDistance * cos(digree));
+		GetPos.y = float(ptEnd.y - dDistance * sin(digree));
 	}
 	break;
 	case 2:
 	{
-		GetPos.x = float(ptEnd.x + dDistance*cos(digree));
-		GetPos.y = float(ptEnd.y - dDistance*sin(digree));
+		GetPos.x = float(ptEnd.x + dDistance * cos(digree));
+		GetPos.y = float(ptEnd.y - dDistance * sin(digree));
 	}
 	break;
 	case 3:
 	{
-		GetPos.x = float(ptEnd.x + dDistance*cos(digree));
-		GetPos.y = float(ptEnd.y + dDistance*sin(digree));
+		GetPos.x = float(ptEnd.x + dDistance * cos(digree));
+		GetPos.y = float(ptEnd.y + dDistance * sin(digree));
 	}
 	break;
 	case 4:
 	{
-		GetPos.x = float(ptEnd.x - dDistance*cos(digree));
-		GetPos.y = float(ptEnd.y + dDistance*sin(digree));
+		GetPos.x = float(ptEnd.x - dDistance * cos(digree));
+		GetPos.y = float(ptEnd.y + dDistance * sin(digree));
 	}
 	break;
 	default:

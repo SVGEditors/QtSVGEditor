@@ -2,11 +2,11 @@
 *
 * @license MIT
 *
-* @copyright: 2022 LinJi
+* @copyright: 2022 LJ
 *
-* @technical support: www.svgsvg.cn
+* @technical support: http://www.svgsvg.cn/support/tech/
 *
-* @email: 93681992@qq.com
+
 *
 * @module: QtSVGEditor
 *
@@ -137,27 +137,27 @@ void CSVGElementImage::resetPath()
 			int nOrgHeight = m_Image.height();
 			if (width != nOrgWidth || height != nOrgHeight)
 			{
-				float fscalex = width*1.0 / nOrgWidth;
-				float fscaley = height*1.0 / nOrgHeight;
+				float fscalex = width * 1.0 / nOrgWidth;
+				float fscaley = height * 1.0 / nOrgHeight;
 				float fscale = fscalex;
 				int nxpos = 0;
 				int nypos = 0;
 				if (fscalex >= fscaley)
 				{
 					fscale = fscaley;
-					nxpos = (width - nOrgWidth*fscale)*1.0 / 2;
+					nxpos = (width - nOrgWidth * fscale)*1.0 / 2;
 					if (nxpos < 0)
 						nxpos = 0;
 				}
 				else
 				{
 					fscale = fscalex;
-					nypos = (height - nOrgHeight*fscale)*1.0 / 2;
+					nypos = (height - nOrgHeight * fscale)*1.0 / 2;
 					if (nypos < 0)
 						nypos = 0;
 				}
-				int nNewWidth = nOrgWidth*fscale;
-				int nNewHeight = nOrgHeight*fscale;
+				int nNewWidth = nOrgWidth * fscale;
+				int nNewHeight = nOrgHeight * fscale;
 				QImage newImage = QImage(width, height, QImage::Format_ARGB32);
 				newImage.fill(0);
 				QPainter painter(&newImage);
@@ -211,8 +211,8 @@ void  CSVGElementImage::resetpatternPath(int nNewWidth, int nNewHeight)
 	{
 		calBBox();
 		m_bPathHasChanged = false;
-		float scalex = nNewWidth*1.0 / m_bbox.width + 0.00001;
-		float scaley = nNewHeight*1.0 / m_bbox.height + 0.00001;
+		float scalex = nNewWidth * 1.0 / m_bbox.width + 0.00001;
+		float scaley = nNewHeight * 1.0 / m_bbox.height + 0.00001;
 
 		m_Path = QPainterPath();
 		if (!IsEmbedImage())
@@ -242,35 +242,35 @@ void  CSVGElementImage::resetpatternPath(int nNewWidth, int nNewHeight)
 			m_Image = LoadFromBase64(strdata);
 		}
 
-		float fnewwidth = width*scalex;
-		float fnewheight = height*scaley;
+		float fnewwidth = width * scalex;
+		float fnewheight = height * scaley;
 		if (fnewwidth > 0 && height > 0 && !m_Image.isNull())
 		{
 			int nOrgWidth = m_Image.width();
 			int nOrgHeight = m_Image.height();
 			if (fnewwidth != nOrgWidth || fnewheight != nOrgHeight)
 			{
-				float fscalex = fnewwidth*1.0 / nOrgWidth;
-				float fscaley = fnewheight*1.0 / nOrgHeight;
+				float fscalex = fnewwidth * 1.0 / nOrgWidth;
+				float fscaley = fnewheight * 1.0 / nOrgHeight;
 				float fscale = fscalex;
 				int nxpos = 0;
 				int nypos = 0;
 				if (fscalex >= fscaley)
 				{
 					fscale = fscaley;
-					nxpos = (fnewwidth - nOrgWidth*fscale)*1.0 / 2;
+					nxpos = (fnewwidth - nOrgWidth * fscale)*1.0 / 2;
 					if (nxpos < 0)
 						nxpos = 0;
 				}
 				else
 				{
 					fscale = fscalex;
-					nypos = (height - nOrgHeight*fscale)*1.0 / 2;
+					nypos = (height - nOrgHeight * fscale)*1.0 / 2;
 					if (nypos < 0)
 						nypos = 0;
 				}
-				int nNewWidth = nOrgWidth*fscale;
-				int nNewHeight = nOrgHeight*fscale;
+				int nNewWidth = nOrgWidth * fscale;
+				int nNewHeight = nOrgHeight * fscale;
 				QImage newImage = QImage(fnewwidth, fnewheight, QImage::Format_ARGB32);
 				newImage.fill(0);
 				QPainter painter(&newImage);

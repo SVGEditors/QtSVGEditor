@@ -2,11 +2,11 @@
 *
 * @license MIT
 *
-* @copyright: 2022 LinJi
+* @copyright: 2022 LJ
 *
-* @technical support: www.svgsvg.cn
+* @technical support: http://www.svgsvg.cn/support/tech/
 *
-* @email: 93681992@qq.com
+
 *
 * @module: QtSVGEditor
 *
@@ -180,10 +180,10 @@ QBrush CSVGElementLinearGradient::getBrush(const CSVGRectF &bbox, float fopacity
 			if (DBEQUAL(k, 0))
 				k = (float)0.0001;
 			float kt = -1.0f / k;
-			float xa = (yc - y[0] + k*x[0] - kt*xc) / (k - kt);
-			float ya = k*(xa - x[0]) + y[0];
-			float xb = (yc - y[1] + k*x[1] - kt*xc) / (k - kt);
-			float yb = k*(xb - x[1]) + y[1];
+			float xa = (yc - y[0] + k * x[0] - kt * xc) / (k - kt);
+			float ya = k * (xa - x[0]) + y[0];
+			float xb = (yc - y[1] + k * x[1] - kt * xc) / (k - kt);
+			float yb = k * (xb - x[1]) + y[1];
 			ptstart.x = xa;
 			ptstart.y = ya;
 			ptend.x = xb;
@@ -211,10 +211,10 @@ QBrush CSVGElementLinearGradient::getBrush(const CSVGRectF &bbox, float fopacity
 			if (DBEQUAL(k, 0))
 				k = (float)0.0001;
 			float kt = -1.0f / k;
-			float xa = (yc - y[0] + k*x[0] - kt*xc) / (k - kt);
-			float ya = k*(xa - x[0]) + y[0];
-			float xb = (yc - y[1] + k*x[1] - kt*xc) / (k - kt);
-			float yb = k*(xb - x[1]) + y[1];
+			float xa = (yc - y[0] + k * x[0] - kt * xc) / (k - kt);
+			float ya = k * (xa - x[0]) + y[0];
+			float xb = (yc - y[1] + k * x[1] - kt * xc) / (k - kt);
+			float yb = k * (xb - x[1]) + y[1];
 			ptstart.x = xb;
 			ptstart.y = yb;
 			ptend.x = xa;
@@ -241,10 +241,10 @@ QBrush CSVGElementLinearGradient::getBrush(const CSVGRectF &bbox, float fopacity
 			if (DBEQUAL(k, 0))
 				k = (float)0.0001;
 			float kt = -1 / k;
-			float xa = (kt*xc - k*x[2] + y[2] - yc) / (kt - k);
-			float ya = k*(xa - x[2]) + y[2];
-			float xb = (kt*xc - k*x[3] + y[3] - yc) / (kt - k);
-			float yb = k*(xb - x[3]) + y[3];
+			float xa = (kt*xc - k * x[2] + y[2] - yc) / (kt - k);
+			float ya = k * (xa - x[2]) + y[2];
+			float xb = (kt*xc - k * x[3] + y[3] - yc) / (kt - k);
+			float yb = k * (xb - x[3]) + y[3];
 
 			ptstart.x = xb;
 			ptstart.y = yb;
@@ -272,10 +272,10 @@ QBrush CSVGElementLinearGradient::getBrush(const CSVGRectF &bbox, float fopacity
 			if (DBEQUAL(k, 0))
 				k = (float)0.0001;
 			float kt = -1 / k;
-			float xa = (kt*xc - k*x[2] + y[2] - yc) / (kt - k);
-			float ya = k*(xa - x[2]) + y[2];
-			float xb = (kt*xc - k*x[3] + y[3] - yc) / (kt - k);
-			float yb = k*(xb - x[3]) + y[3];
+			float xa = (kt*xc - k * x[2] + y[2] - yc) / (kt - k);
+			float ya = k * (xa - x[2]) + y[2];
+			float xb = (kt*xc - k * x[3] + y[3] - yc) / (kt - k);
+			float yb = k * (xb - x[3]) + y[3];
 
 			ptstart.x = xa;
 			ptstart.y = ya;

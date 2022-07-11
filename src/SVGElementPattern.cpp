@@ -2,11 +2,11 @@
 *
 * @license MIT
 *
-* @copyright: 2022 LinJi
+* @copyright: 2022 LJ
 *
-* @technical support: www.svgsvg.cn
+* @technical support: http://www.svgsvg.cn/support/tech/
 *
-* @email: 93681992@qq.com
+
 *
 * @module: QtSVGEditor
 *
@@ -101,10 +101,10 @@ QBrush CSVGElementPattern::getBrush(const CSVGRectF &bbox)
 	int nimgheight = height;
 	if (m_patternContentUnits == L"objectBoundingBox")
 	{
-		nx = x*bbox.x;
-		ny = y*bbox.y;
-		nimgwidth = width*bbox.width;
-		nimgheight = height*bbox.height;
+		nx = x * bbox.x;
+		ny = y * bbox.y;
+		nimgwidth = width * bbox.width;
+		nimgheight = height * bbox.height;
 	}
 	QImage Image(nimgwidth, nimgheight, QImage::Format_ARGB32);
 	Image.fill(0);

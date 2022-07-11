@@ -2,11 +2,11 @@
 *
 * @license MIT
 *
-* @copyright: 2022 LinJi
+* @copyright: 2022 LJ
 *
-* @technical support: www.svgsvg.cn
+* @technical support: http://www.svgsvg.cn/support/tech/
 *
-* @email: 93681992@qq.com
+
 *
 * @module: QtSVGEditor
 *
@@ -798,8 +798,8 @@ CSVGRectF CSVGElementPath::GetBezierBox(CSVGPointF &pt_0, CSVGPointF &pt_1
 	CSVGPointF pt4 = pt_0;
 	if (std::abs(y0 - 3 * y1 + 3 * y2 - y3) > 0)
 	{
-		float t1 = (y0 - 2 * y1 + y2 - sqrt(y1*y1 - y0*y2 - y1*y2 + y2*y2 + y0*y3 - y1*y3)) / (y0 - 3 * y1 + 3 * y2 - y3);
-		float t2 = (y0 - 2 * y1 + y2 + sqrt(y1*y1 - y0*y2 - y1*y2 + y2*y2 + y0*y3 - y1*y3)) / (y0 - 3 * y1 + 3 * y2 - y3);
+		float t1 = (y0 - 2 * y1 + y2 - sqrt(y1*y1 - y0 * y2 - y1 * y2 + y2 * y2 + y0 * y3 - y1 * y3)) / (y0 - 3 * y1 + 3 * y2 - y3);
+		float t2 = (y0 - 2 * y1 + y2 + sqrt(y1*y1 - y0 * y2 - y1 * y2 + y2 * y2 + y0 * y3 - y1 * y3)) / (y0 - 3 * y1 + 3 * y2 - y3);
 		if (t1 > 0 && t1 < 1)
 			pt1 = GetPt(pt_0, pt_1, pt_2, pt_3, t1);
 		if (t2 > 0 && t2 < 1)
@@ -807,8 +807,8 @@ CSVGRectF CSVGElementPath::GetBezierBox(CSVGPointF &pt_0, CSVGPointF &pt_1
 	}
 	if (std::abs(x0 - 3 * x1 + 3 * x2 - x3) > 0)
 	{
-		float t3 = (x0 - 2 * x1 + x2 - sqrt(x1*x1 - x0*x2 - x1*x2 + x2*x2 + x0*x3 - x1*x3)) / (x0 - 3 * x1 + 3 * x2 - x3);
-		float t4 = (x0 - 2 * x1 + x2 + sqrt(x1*x1 - x0*x2 - x1*x2 + x2*x2 + x0*x3 - x1*x3)) / (x0 - 3 * x1 + 3 * x2 - x3);
+		float t3 = (x0 - 2 * x1 + x2 - sqrt(x1*x1 - x0 * x2 - x1 * x2 + x2 * x2 + x0 * x3 - x1 * x3)) / (x0 - 3 * x1 + 3 * x2 - x3);
+		float t4 = (x0 - 2 * x1 + x2 + sqrt(x1*x1 - x0 * x2 - x1 * x2 + x2 * x2 + x0 * x3 - x1 * x3)) / (x0 - 3 * x1 + 3 * x2 - x3);
 		if (t3 > 0 && t3 < 1)
 			pt3 = GetPt(pt_0, pt_1, pt_2, pt_3, t3);
 		if (t4 > 0 && t4 < 1)
@@ -1021,8 +1021,8 @@ void  CSVGElementPath::resetpatternPath(int nNewWidth, int nNewHeight)
 		m_pathpts.clear();
 		getPathpoints();
 		calBBox();
-		float scalex = nNewWidth*1.0 / m_bbox.width + 0.00001;
-		float scaley = nNewHeight*1.0 / m_bbox.height + 0.00001;
+		float scalex = nNewWidth * 1.0 / m_bbox.width + 0.00001;
+		float scaley = nNewHeight * 1.0 / m_bbox.height + 0.00001;
 		m_bbox.x *= scalex;
 		m_bbox.y *= scaley;
 		m_bbox.width *= scalex;

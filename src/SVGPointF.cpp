@@ -2,11 +2,11 @@
 *
 * @license MIT
 *
-* @copyright: 2022 LinJi
+* @copyright: 2022 LJ
 *
-* @technical support: www.svgsvg.cn
+* @technical support: http://www.svgsvg.cn/support/tech/
 *
-* @email: 93681992@qq.com
+
 *
 * @module: QtSVGEditor
 *
@@ -75,8 +75,8 @@ bool CSVGPointF::operator==(const CSVGPointF& o)
 
 CSVGPointF CSVGPointF::matrixTransform(const CSVGMatrix &_mat)
 {
-	CSVGPointF res(x*_mat.m_a + y*_mat.m_c + _mat.m_e,
-		x*_mat.m_b + y*_mat.m_d + _mat.m_f);
+	CSVGPointF res(x*_mat.m_a + y * _mat.m_c + _mat.m_e,
+		x*_mat.m_b + y * _mat.m_d + _mat.m_f);
 	return res;
 }
 

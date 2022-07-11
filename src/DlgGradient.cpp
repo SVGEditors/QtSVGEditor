@@ -2,11 +2,11 @@
 *
 * @license MIT
 *
-* @copyright: 2022 LinJi
+* @copyright: 2022 LJ
 *
-* @technical support: www.svgsvg.cn
+* @technical support: http://www.svgsvg.cn/support/tech/
 *
-* @email: 93681992@qq.com
+
 *
 * @module: QtSVGEditor
 *
@@ -362,7 +362,7 @@ bool  CDlgGradient::IsSelectColor(int nXPos)
 		nXPos = nImageWidth + 20;
 	}
 	int nPos = nXPos - 20;
-	float fpos = nPos*1.0 / nImageWidth;
+	float fpos = nPos * 1.0 / nImageWidth;
 	float fDelta = 8.0 / nImageWidth;
 	//判断当前是否存在;
 	for (int i = 0; i < m_vcColor.size(); ++i)
@@ -388,7 +388,7 @@ void  CDlgGradient::DeletePosColor(int nXPos)
 		nXPos = nImageWidth + 20;
 	}
 	int nPos = nXPos - 20;
-	float fpos = nPos*1.0 / nImageWidth;
+	float fpos = nPos * 1.0 / nImageWidth;
 	float fDelta = 8.0 / nImageWidth;
 	//判断当前是否存在;
 	for (int i = 0; i < m_vcColor.size(); ++i)
@@ -425,7 +425,7 @@ void  CDlgGradient::MoveColor(int nXPos)
 		nXPos = nImageWidth + 20;
 	}
 	int nPos = nXPos - 20;
-	float fpos = nPos*1.0 / nImageWidth;
+	float fpos = nPos * 1.0 / nImageWidth;
 
 	COLORPOS DefaultClr;
 	bool bChange = false;
@@ -478,7 +478,7 @@ void  CDlgGradient::PressPosColor(int nXPos, int nYPos, bool bShowMenu)
 	}
 
 	int nPos = nXPos - 20;
-	float fpos = nPos*1.0 / nImageWidth;
+	float fpos = nPos * 1.0 / nImageWidth;
 	float fDelta = 8.0 / nImageWidth;
 
 	for (int i = 0; i < m_vcColor.size(); ++i)
@@ -550,7 +550,7 @@ void  CDlgGradient::ReDrawMultiColorBar()
 	{//绘制三角形
 		COLORPOS &clrpos = m_vcColor[i];
 		QPolygon polygon;
-		int nXPos = nImageWidth*clrpos.fpos + 20;
+		int nXPos = nImageWidth * clrpos.fpos + 20;
 		polygon.push_back(QPoint(nXPos, 40));
 		polygon.push_back(QPoint(nXPos - 8, 58));
 		polygon.push_back(QPoint(nXPos + 8, 58));

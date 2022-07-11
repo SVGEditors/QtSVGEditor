@@ -2,11 +2,11 @@
 *
 * @license MIT
 *
-* @copyright: 2022 LinJi
+* @copyright: 2022 LJ
 *
-* @technical support: www.svgsvg.cn
+* @technical support: http://www.svgsvg.cn/support/tech/
 *
-* @email: 93681992@qq.com
+
 *
 * @module: QtSVGEditor
 *
@@ -22,7 +22,7 @@
 #pragma once
 #include <QVector>
 #include <vector>
-#include <qdom.h>
+#include <QDomElement>
 
 class CSVGElement;
 class CSVGDocument;

@@ -2,11 +2,11 @@
 *
 * @license MIT
 *
-* @copyright: 2022 LinJi
+* @copyright: 2022 LJ
 *
-* @technical support: www.svgsvg.cn
+* @technical support: http://www.svgsvg.cn/support/tech/
 *
-* @email: 93681992@qq.com
+
 *
 * @module: QtSVGEditor
 *
@@ -39,7 +39,7 @@ public:
 	virtual void SetItemFocus();
 Q_SIGNALS:
 	void textChanged(int nrow, const QString &str);
-	public slots:
+public slots:
 	void OneditingFinished();
 	void OnFocusIn();
 protected:
@@ -59,7 +59,7 @@ public:
 	CColorItem(QString strValue, int nRow, int nCol, QTableWidget *parent);
 	virtual void ResetValue(QString strValue);
 	virtual void resizeEvent(QResizeEvent *event);
-	public slots:
+public slots:
 	void OnButtonClick();
 	void OncolorSelected(QColor clr);
 	void OneditingFinished();
@@ -85,7 +85,7 @@ public:
 	virtual void resizeEvent(QResizeEvent *event);
 	void SetText(QString strValue);
 	QString GetText();
-	public slots:
+public slots:
 	void OnButtonClick();
 Q_SIGNALS:
 	void ButtonClick(int nrow);
@@ -101,7 +101,7 @@ public:
 	CSliderItem(QString strValue, int nMinValue, int nMaxValue, int nRow, int nCol, QTableWidget *parent);
 	virtual void ResetValue(QString strValue);
 	virtual void resizeEvent(QResizeEvent *event);
-	public slots:
+public slots:
 	void OnSlidervalueChanged(int value);
 	void OneditingFinished();
 	void OnsliderReleased();
@@ -125,7 +125,7 @@ public:
 	QString GetText();
 Q_SIGNALS:
 	void textChanged(int nrow, const QString &str);
-	public slots:
+public slots:
 	void OnEndFocus(const QString &str);
 private:
 	QComboBox *m_pCombox;
@@ -144,11 +144,11 @@ public:
 	bool UpdateProperty(QString strName, QString strValue);
 	void AddProperty(QString strName, QString strValue);
 	void LockNotify(bool bNotify);
-	public slots:
+public slots:
 	void OnitemSelectionChanged();
 Q_SIGNALS:
 	void textChanged(const QString &strName, const QString &strValue);
-	public slots:
+public slots:
 	void OntextChanged(int nrow, const QString &str);
 private:
 	bool m_bNotify;

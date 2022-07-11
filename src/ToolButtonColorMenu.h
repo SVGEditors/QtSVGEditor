@@ -2,11 +2,11 @@
 *
 * @license MIT
 *
-* @copyright: 2022 LinJi
+* @copyright: 2022 LJ
 *
-* @technical support: www.svgsvg.cn
+* @technical support: http://www.svgsvg.cn/support/tech/
 *
-* @email: 93681992@qq.com
+
 *
 * @module: QtSVGEditor
 *
@@ -36,7 +36,7 @@ Q_SIGNALS:
 	void colorSelectedRadient(const std::wstring &);
 	void colorSelectedPattern(const std::wstring &);
 	void colorSelectedPicture(const std::wstring &);
-	public Q_SLOTS:
+public Q_SLOTS:
 	void OnColorSelect(QColor clr);
 	void OncolorSelectedRadient(const std::wstring &str);
 	void OncolorSelectedPattern(const std::wstring &str);

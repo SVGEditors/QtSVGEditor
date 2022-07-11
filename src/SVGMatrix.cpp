@@ -2,11 +2,11 @@
 *
 * @license MIT
 *
-* @copyright: 2022 LinJi
+* @copyright: 2022 LJ
 *
-* @technical support: www.svgsvg.cn
+* @technical support: http://www.svgsvg.cn/support/tech/
 *
-* @email: 93681992@qq.com
+
 *
 * @module: QtSVGEditor
 *
@@ -46,12 +46,12 @@ CSVGMatrix::~CSVGMatrix()
 }
 void CSVGMatrix::operator*=(const CSVGMatrix& secondMatrix)
 {
-	float a = m_a*secondMatrix.m_a + m_c*secondMatrix.m_b;
-	float b = m_b*secondMatrix.m_a + m_d*secondMatrix.m_b;
-	float c = m_a*secondMatrix.m_c + m_c*secondMatrix.m_d;
-	float d = m_b*secondMatrix.m_c + m_d*secondMatrix.m_d;
-	float e = m_a*secondMatrix.m_e + m_c*secondMatrix.m_f + m_e;
-	float f = m_b*secondMatrix.m_e + m_d*secondMatrix.m_f + m_f;
+	float a = m_a * secondMatrix.m_a + m_c * secondMatrix.m_b;
+	float b = m_b * secondMatrix.m_a + m_d * secondMatrix.m_b;
+	float c = m_a * secondMatrix.m_c + m_c * secondMatrix.m_d;
+	float d = m_b * secondMatrix.m_c + m_d * secondMatrix.m_d;
+	float e = m_a * secondMatrix.m_e + m_c * secondMatrix.m_f + m_e;
+	float f = m_b * secondMatrix.m_e + m_d * secondMatrix.m_f + m_f;
 
 	m_a = a; m_b = b; m_c = c; m_d = d; m_e = e; m_f = f;
 }
@@ -98,12 +98,12 @@ bool CSVGMatrix::IsEmpty()
 }
 void CSVGMatrix::Add(const CSVGMatrix& secondMatrix)
 {
-	float fa = m_a*secondMatrix.m_a + m_c*secondMatrix.m_b;
-	float fb = m_b*secondMatrix.m_a + m_d*secondMatrix.m_b;
-	float fc = m_a*secondMatrix.m_c + m_c*secondMatrix.m_d;
-	float fd = m_b*secondMatrix.m_c + m_d*secondMatrix.m_d;
-	float fe = m_a*secondMatrix.m_e + m_c*secondMatrix.m_f + m_e;
-	float ff = m_b*secondMatrix.m_e + m_d*secondMatrix.m_f + m_f;
+	float fa = m_a * secondMatrix.m_a + m_c * secondMatrix.m_b;
+	float fb = m_b * secondMatrix.m_a + m_d * secondMatrix.m_b;
+	float fc = m_a * secondMatrix.m_c + m_c * secondMatrix.m_d;
+	float fd = m_b * secondMatrix.m_c + m_d * secondMatrix.m_d;
+	float fe = m_a * secondMatrix.m_e + m_c * secondMatrix.m_f + m_e;
+	float ff = m_b * secondMatrix.m_e + m_d * secondMatrix.m_f + m_f;
 	m_a = fa;
 	m_b = fb;
 	m_c = fc;
@@ -132,13 +132,13 @@ void CSVGMatrix::LAdd(const CSVGMatrix& secondMatrix)
 
 void CSVGMatrix::Inverse()
 {
-	float temp = (float)1.0 / (m_a*m_d - m_b*m_c);
+	float temp = (float)1.0 / (m_a*m_d - m_b * m_c);
 	float fa = ((float)(m_d*temp));
-	float fb = ((float)(-m_b*temp));
-	float fc = ((float)(-m_c*temp));
+	float fb = ((float)(-m_b * temp));
+	float fc = ((float)(-m_c * temp));
 	float fd = ((float)(m_a*temp));
-	float fe = ((float)(-m_e*fa - m_f*fc));
-	float ff = ((float)(-m_e*fb - m_f*fd));
+	float fe = ((float)(-m_e * fa - m_f * fc));
+	float ff = ((float)(-m_e * fb - m_f * fd));
 
 	m_a = fa;
 	m_b = fb;

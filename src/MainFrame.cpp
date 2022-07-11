@@ -2,11 +2,11 @@
 *
 * @license MIT
 *
-* @copyright: 2022 LinJi
+* @copyright: 2022 LJ
 *
-* @technical support: www.svgsvg.cn
+* @technical support: http://www.svgsvg.cn/support/tech/
 *
-* @email: 93681992@qq.com
+
 *
 * @module: QtSVGEditor
 *
@@ -174,173 +174,173 @@ void CMainFrame::dropEvent(QDropEvent *event)
 
 void CMainFrame::setupFileActions()
 {
-	QToolBar *tb = addToolBar(tr("File"));
-	QMenu *menu = menuBar()->addMenu(tr("File(&F)"));
+	QToolBar *tb = addToolBar(QString::fromStdWString(L"文件"));
+	QMenu *menu = menuBar()->addMenu(QString::fromStdWString(L"文件(&F)"));
 
 	const QIcon newIcon = QIcon(":/images/filenew.png");
-	QAction *a = menu->addAction(newIcon, tr("New(&N)"), this, SLOT(fileNew()));
+	QAction *a = menu->addAction(newIcon, QString::fromStdWString(L"新建(&N)"), this, SLOT(fileNew()));
 	tb->addAction(a);
 	a->setPriority(QAction::LowPriority);
 	a->setShortcut(QKeySequence::New);
 
 	const QIcon openIcon = QIcon(":/images/fileopen.png");
-	a = menu->addAction(openIcon, tr("Open(&O)"), this, SLOT(fileOpen()));
+	a = menu->addAction(openIcon, QString::fromStdWString(L"打开(&O)"), this, SLOT(fileOpen()));
 	a->setShortcut(QKeySequence::Open);
 	tb->addAction(a);
 
 	menu->addSeparator();
 
 	const QIcon saveIcon = QIcon(":/images/filesave.png");
-	m_pactionSave = menu->addAction(saveIcon, tr("Save(&S)"), this, SLOT(fileSave()));
+	m_pactionSave = menu->addAction(saveIcon, QString::fromStdWString(L"保存(&S)"), this, SLOT(fileSave()));
 	m_pactionSave->setShortcut(QKeySequence::Save);
 	m_pactionSave->setEnabled(true);
 	tb->addAction(m_pactionSave);
 
-	a = menu->addAction(tr("Save As"), this, SLOT(fileSaveAs()));
+	a = menu->addAction(QString::fromStdWString(L"另存为"), this, SLOT(fileSaveAs()));
 	a->setPriority(QAction::LowPriority);
 	menu->addSeparator();
-	m_pActionExportPng = menu->addAction(tr("Export To Png"), this, SLOT(fileSaveASPng()));
+	m_pActionExportPng = menu->addAction(QString::fromStdWString(L"导出PNG"), this, SLOT(fileSaveASPng()));
 	a->setPriority(QAction::LowPriority);
-	m_pActionExportJpg = menu->addAction(tr("Export To Jpg"), this, SLOT(fileSaveASJpg()));
+	m_pActionExportJpg = menu->addAction(QString::fromStdWString(L"导出JPG"), this, SLOT(fileSaveASJpg()));
 	a->setPriority(QAction::LowPriority);
 
 	menu->addSeparator();
 
 
-	a = menu->addAction(tr("Exit"), this, SLOT(close()));
+	a = menu->addAction(QString::fromStdWString(L"退出"), this, SLOT(close()));
 	a->setShortcut(Qt::CTRL + Qt::Key_Q);
 }
 
 void CMainFrame::setupEditActions()
 {
-	QToolBar *tb = addToolBar(tr("Edit"));
-	QMenu *menu = menuBar()->addMenu(tr("Edit(&E)"));
+	QToolBar *tb = addToolBar(QString::fromStdWString(L"编辑"));
+	QMenu *menu = menuBar()->addMenu(QString::fromStdWString(L"编辑(&E)"));
 	QIcon Icon = QIcon(":/images/editundo.png");
-	m_pActionundo = menu->addAction(Icon, tr("Undo(&U)"), this, SLOT(undo()));
+	m_pActionundo = menu->addAction(Icon, QString::fromStdWString(L"撤销(&U)"), this, SLOT(undo()));
 	tb->addAction(m_pActionundo);
 
 
 	Icon = QIcon(":/images/editredo.png");
-	m_pActionredo = menu->addAction(Icon, tr("Redo(&V)"), this, SLOT(redo()));
+	m_pActionredo = menu->addAction(Icon, QString::fromStdWString(L"反撤销(&V)"), this, SLOT(redo()));
 	tb->addAction(m_pActionredo);
 	menu->addSeparator();
 
 	Icon = QIcon(":/images/editcopy.png");
-	m_pActioncopy = menu->addAction(Icon, tr("Copy(&C)"), this, SLOT(copy()));
+	m_pActioncopy = menu->addAction(Icon, QString::fromStdWString(L"复制(&C)"), this, SLOT(copy()));
 	tb->addAction(m_pActioncopy);
 
 	Icon = QIcon(":/images/editpaste.png");
-	m_pActionpaste = menu->addAction(Icon, tr("Paste(&V)"), this, SLOT(paste()));
+	m_pActionpaste = menu->addAction(Icon, QString::fromStdWString(L"粘贴(&V)"), this, SLOT(paste()));
 	tb->addAction(m_pActionpaste);
 }
 
 void CMainFrame::setupViewActions()
 {
-	QMenu *menu = menuBar()->addMenu(tr("View(&V)"));
+	QMenu *menu = menuBar()->addMenu(QString::fromStdWString(L"视图(&V)"));
 	connect(menu, SIGNAL(aboutToShow()), this, SLOT(OnMenuViewToShow()));
 
-	m_ActionPropertyView = menu->addAction(tr("Property View"), this, SLOT(perpertyview()));
+	m_ActionPropertyView = menu->addAction(QString::fromStdWString(L"属性视图"), this, SLOT(perpertyview()));
 	m_ActionPropertyView->setCheckable(true);
 }
 
 void CMainFrame::setupDrawActions()
 {
-	QToolBar *tb = addToolBar(tr("Draw"));
+	QToolBar *tb = addToolBar(QString::fromStdWString(L"绘制"));
 	QIcon icon = QIcon(":/images/drawline.png");
-	m_pActionDrawLine = tb->addAction(icon, tr("Line"), this, SLOT(drawline()));
+	m_pActionDrawLine = tb->addAction(icon, QString::fromStdWString(L"直线"), this, SLOT(drawline()));
 
 	icon = QIcon(":/images/drawrect.png");
-	m_pActionDrawRect = tb->addAction(icon, tr("Rectangle"), this, SLOT(drawrect()));
+	m_pActionDrawRect = tb->addAction(icon, QString::fromStdWString(L"矩形"), this, SLOT(drawrect()));
 
 	icon = QIcon(":/images/drawcircle.png");
-	m_pActionDrawCircle = tb->addAction(icon, tr("Circle"), this, SLOT(drawcircle()));
+	m_pActionDrawCircle = tb->addAction(icon, QString::fromStdWString(L"圆"), this, SLOT(drawcircle()));
 
 	icon = QIcon(":/images/drawellipse.png");
-	m_pActionDrawEllipse = tb->addAction(icon, tr("Ellipse"), this, SLOT(drawellipse()));
+	m_pActionDrawEllipse = tb->addAction(icon, QString::fromStdWString(L"椭圆"), this, SLOT(drawellipse()));
 
 	icon = QIcon(":/images/drawpolyline.png");
-	m_pActionDrawPolyline = tb->addAction(icon, tr("Polyline"), this, SLOT(drawpolyline()));
+	m_pActionDrawPolyline = tb->addAction(icon, QString::fromStdWString(L"折线"), this, SLOT(drawpolyline()));
 
 	icon = QIcon(":/images/drawpolygon.png");
-	m_pActionDrawPolygon = tb->addAction(icon, tr("Polygon"), this, SLOT(drawpolygon()));
+	m_pActionDrawPolygon = tb->addAction(icon, QString::fromStdWString(L"多边形"), this, SLOT(drawpolygon()));
 
 	icon = QIcon(":/images/drawpath.png");
-	m_pActionDrawpath = tb->addAction(icon, tr("Path"), this, SLOT(drawpath()));
+	m_pActionDrawpath = tb->addAction(icon, QString::fromStdWString(L"贝塞尔曲线"), this, SLOT(drawpath()));
 
 	icon = QIcon(":/images/drawtext.png");
-	m_pActionDrawtext = tb->addAction(icon, tr("Text"), this, SLOT(drawtext()));
+	m_pActionDrawtext = tb->addAction(icon, QString::fromStdWString(L"文本"), this, SLOT(drawtext()));
 
 
 	icon = QIcon(":/images/drawimage.png");
-	m_pActionDrawImage = tb->addAction(icon, tr("Image"), this, SLOT(drawimage()));
+	m_pActionDrawImage = tb->addAction(icon, QString::fromStdWString(L"图片"), this, SLOT(drawimage()));
 
 	icon = QIcon(":/images/drawcontinue.png");
-	m_pActionDrawContinue = tb->addAction(icon, tr("Continue Draw"), this, SLOT(drawcontinue()));
+	m_pActionDrawContinue = tb->addAction(icon, QString::fromStdWString(L"继续绘制"), this, SLOT(drawcontinue()));
 }
 
 void CMainFrame::setupZoomActions()
 {
-	QToolBar *tb = addToolBar(tr("Zoom"));
+	QToolBar *tb = addToolBar(QString::fromStdWString(L"放大"));
 
 	QIcon icon = QIcon(":/images/arrow.png");
-	m_pActionArrow = tb->addAction(icon, tr("Mouse Arrow"), this, SLOT(arrow()));
+	m_pActionArrow = tb->addAction(icon, QString::fromStdWString(L"箭头鼠标"), this, SLOT(arrow()));
 	tb->addSeparator();
 
 	icon = QIcon(":/images/zoomrestore.png");
-	m_pActionRestore = tb->addAction(icon, tr("Restore"), this, SLOT(zoomrestore()));
+	m_pActionRestore = tb->addAction(icon, QString::fromStdWString(L"恢复缩放"), this, SLOT(zoomrestore()));
 
 	icon = QIcon(":/images/zoomin.png");
-	m_pActionZoomin = tb->addAction(icon, tr("Zoom In"), this, SLOT(zoomin()));
+	m_pActionZoomin = tb->addAction(icon, QString::fromStdWString(L"放大"), this, SLOT(zoomin()));
 
 	icon = QIcon(":/images/zoomout.png");
-	m_pActionZoomout = tb->addAction(icon, tr("Zoom Out"), this, SLOT(zoomout()));
+	m_pActionZoomout = tb->addAction(icon, QString::fromStdWString(L"缩小"), this, SLOT(zoomout()));
 
 	icon = QIcon(":/images/move.png");
-	m_pActionZoommove = tb->addAction(icon, tr("Move"), this, SLOT(zoommove()));
+	m_pActionZoommove = tb->addAction(icon, QString::fromStdWString(L"移动"), this, SLOT(zoommove()));
 
 	tb->addSeparator();
 	icon = QIcon(":/images/rotate.png");
-	m_pActionRotate = tb->addAction(icon, tr("Rotate"), this, SLOT(rotate()));
+	m_pActionRotate = tb->addAction(icon, QString::fromStdWString(L"旋转"), this, SLOT(rotate()));
 }
 
 void CMainFrame::setupGroupActions()
 {
-	QToolBar *tb = addToolBar(tr("Group"));
+	QToolBar *tb = addToolBar(QString::fromStdWString(L"组合"));
 	QIcon icon = QIcon(":/images/group.png");
-	m_pActionGroup = tb->addAction(icon, tr("Group"), this, SLOT(OnGroup()));
+	m_pActionGroup = tb->addAction(icon, QString::fromStdWString(L"组合"), this, SLOT(OnGroup()));
 
 	icon = QIcon(":/images/ungroup.png");
-	m_pActionUnGroup = tb->addAction(icon, tr("Ungroup"), this, SLOT(OnUnGroup()));
+	m_pActionUnGroup = tb->addAction(icon, QString::fromStdWString(L"解除组合"), this, SLOT(OnUnGroup()));
 	tb->addSeparator();
 
 	icon = QIcon(":/images/layertop.png");
-	m_pActionMoveTop = tb->addAction(icon, tr("Move Top"), this, SLOT(layertop()));
+	m_pActionMoveTop = tb->addAction(icon, QString::fromStdWString(L"移到顶层"), this, SLOT(layertop()));
 
 	icon = QIcon(":/images/layerbottom.png");
-	m_pActionMoveBottom = tb->addAction(icon, tr("Move Bottom"), this, SLOT(layerbottom()));
+	m_pActionMoveBottom = tb->addAction(icon, QString::fromStdWString(L"移到底层"), this, SLOT(layerbottom()));
 
 	icon = QIcon(":/images/layerup.png");
-	m_pActionMoveup = tb->addAction(icon, tr("Move Up"), this, SLOT(layerup()));
+	m_pActionMoveup = tb->addAction(icon, QString::fromStdWString(L"上移一层"), this, SLOT(layerup()));
 
 	icon = QIcon(":/images/layerdown.png");
-	m_pActionMoveDown = tb->addAction(icon, tr("Move Down"), this, SLOT(layerdown()));
+	m_pActionMoveDown = tb->addAction(icon, QString::fromStdWString(L"下移一层"), this, SLOT(layerdown()));
 	tb->addSeparator();
 
 	icon = QIcon(":/images/turnoverhor.png");
-	m_pActionMoveHor = tb->addAction(icon, tr("Flip Horizontal"), this, SLOT(mirrorright()));
+	m_pActionMoveHor = tb->addAction(icon, QString::fromStdWString(L"水平翻转"), this, SLOT(mirrorright()));
 
 	icon = QIcon(":/images/turnoverver.png");
-	m_pActionMoveVer = tb->addAction(icon, tr("Flip Vertically"), this, SLOT(mirrorbottom()));
+	m_pActionMoveVer = tb->addAction(icon, QString::fromStdWString(L"垂直翻转"), this, SLOT(mirrorbottom()));
 
 	icon = QIcon(":/images/turnright.png");
-	m_pActionTurnRight = tb->addAction(icon, tr("Flip Right"), this, SLOT(turnright()));
+	m_pActionTurnRight = tb->addAction(icon, QString::fromStdWString(L"向右旋转"), this, SLOT(turnright()));
 
 	icon = QIcon(":/images/turnleft.png");
-	m_pActionTurnLeft = tb->addAction(icon, tr("Flip Left"), this, SLOT(turnleft()));
+	m_pActionTurnLeft = tb->addAction(icon, QString::fromStdWString(L"向左旋转"), this, SLOT(turnleft()));
 }
 void CMainFrame::setupFontActions()
 {
-	QToolBar *tb = addToolBar(tr("Font"));
+	QToolBar *tb = addToolBar(QString::fromStdWString(L"字体"));
 
 	typedef void (QComboBox::*QComboStringSignal)(const QString &);
 
@@ -366,19 +366,19 @@ void CMainFrame::setupFontActions()
 
 
 	const QIcon boldIcon = QIcon(":/images/textbold.png");
-	m_pActionTextBold = tb->addAction(boldIcon, tr("Bold"), this, SLOT(OntextBold()));
+	m_pActionTextBold = tb->addAction(boldIcon, QString::fromStdWString(L"加粗"), this, SLOT(OntextBold()));
 	QFont bold;
 	bold.setBold(true);
 	m_pActionTextBold->setFont(bold);
 
 	const QIcon italicIcon = QIcon(":/images/textitalic.png");
-	m_pActionTextItalic = tb->addAction(italicIcon, tr("Italics"), this, SLOT(OntextItalic()));
+	m_pActionTextItalic = tb->addAction(italicIcon, QString::fromStdWString(L"斜体"), this, SLOT(OntextItalic()));
 	QFont italic;
 	italic.setItalic(true);
 	m_pActionTextItalic->setFont(italic);
 
 	const QIcon underlineIcon = QIcon(":/images/textunder.png");
-	m_pActionTextUnderline = tb->addAction(underlineIcon, tr("Underline"), this, SLOT(OntextUnderLine()));
+	m_pActionTextUnderline = tb->addAction(underlineIcon, QString::fromStdWString(L"下划线"), this, SLOT(OntextUnderLine()));
 	QFont underline;
 	underline.setUnderline(true);
 	m_pActionTextUnderline->setFont(underline);
@@ -391,46 +391,46 @@ void CMainFrame::setupFontActions()
 
 void CMainFrame::setupAlignActions()
 {
-	QToolBar *tb = addToolBar(tr("Align"));
+	QToolBar *tb = addToolBar(QString::fromStdWString(L"对齐方式"));
 
 	QIcon icon = QIcon(":/images/aligntop.png");
-	m_pActionAlignTop = tb->addAction(icon, tr("Align Top"), this, SLOT(aligntop()));
+	m_pActionAlignTop = tb->addAction(icon, QString::fromStdWString(L"上对齐"), this, SLOT(aligntop()));
 
 	icon = QIcon(":/images/alignbottom.png");
-	m_pActionAlignBottom = tb->addAction(icon, tr("Align Bottom"), this, SLOT(alignbottom()));
+	m_pActionAlignBottom = tb->addAction(icon, QString::fromStdWString(L"下对齐"), this, SLOT(alignbottom()));
 
 	icon = QIcon(":/images/alignleft.png");
-	m_pActionAlignLeft = tb->addAction(icon, tr("Align Left"), this, SLOT(alignleft()));
+	m_pActionAlignLeft = tb->addAction(icon, QString::fromStdWString(L"左对齐"), this, SLOT(alignleft()));
 
 	icon = QIcon(":/images/alignright.png");
-	m_pActionAlignRight = tb->addAction(icon, tr("Align Right"), this, SLOT(alignright()));
+	m_pActionAlignRight = tb->addAction(icon, QString::fromStdWString(L"右对齐"), this, SLOT(alignright()));
 
 	icon = QIcon(":/images/alignmidver.png");
-	m_pActionAlignVerMid = tb->addAction(icon, tr("Align Vertically"), this, SLOT(alignverline()));
+	m_pActionAlignVerMid = tb->addAction(icon, QString::fromStdWString(L"垂直对齐"), this, SLOT(alignverline()));
 
 	icon = QIcon(":/images/alignmidhor.png");
-	m_pActionAlignHorMid = tb->addAction(icon, tr("Align Horizontal"), this, SLOT(alignhorline()));
+	m_pActionAlignHorMid = tb->addAction(icon, QString::fromStdWString(L"水平对齐"), this, SLOT(alignhorline()));
 
 
 	icon = QIcon(":/images/alignsamespacehor.png");
-	m_pActionAlignHorSame = tb->addAction(icon, tr("Consistent Horizontal Spacing"), this, SLOT(alignhorspace()));
+	m_pActionAlignHorSame = tb->addAction(icon, QString::fromStdWString(L"水平间距一致"), this, SLOT(alignhorspace()));
 
 	icon = QIcon(":/images/alignsamespacever.png");
-	m_pActionAlignVerSame = tb->addAction(icon, tr("Consistent Vertical Spacing"), this, SLOT(alignverspace()));
+	m_pActionAlignVerSame = tb->addAction(icon, QString::fromStdWString(L"垂直间距一致"), this, SLOT(alignverspace()));
 
 	icon = QIcon(":/images/alignsamewidth.png");
-	m_pActionAlignWidthSame = tb->addAction(icon, tr("Consistent Width"), this, SLOT(alignsamewidth()));
+	m_pActionAlignWidthSame = tb->addAction(icon, QString::fromStdWString(L"一样宽"), this, SLOT(alignsamewidth()));
 
 	icon = QIcon(":/images/alignsameheight.png");
-	m_pActionAlignHeightSame = tb->addAction(icon, tr("Consistent Height"), this, SLOT(alignsameheight()));
+	m_pActionAlignHeightSame = tb->addAction(icon, QString::fromStdWString(L"一样高"), this, SLOT(alignsameheight()));
 
 	icon = QIcon(":/images/alignsamesize.png");
-	m_pActionAlignSizeSame = tb->addAction(icon, tr("Consistent Size"), this, SLOT(alignsamesize()));
+	m_pActionAlignSizeSame = tb->addAction(icon, QString::fromStdWString(L"大小一致"), this, SLOT(alignsamesize()));
 }
 
 void CMainFrame::setupColorActions()
 {
-	QToolBar *tb = addToolBar(tr("Color"));
+	QToolBar *tb = addToolBar(QString::fromStdWString(L"颜色"));
 
 	m_textlinewidthbutton = new CToolButtonComboxMenu(0, 1, tb);
 	m_textlinewidthbutton->setFixedSize(100, 32);
@@ -467,20 +467,20 @@ void CMainFrame::setupColorActions()
 
 void CMainFrame::setupCanvasActions()
 {
-	QToolBar *tb = addToolBar(tr("Canvas"));
+	QToolBar *tb = addToolBar(QString::fromStdWString(L"画布"));
 	QIcon newIcon = QIcon(":/images/showrule.png");
-	m_pActionRule = tb->addAction(newIcon, tr("Show Rule"), this, SLOT(OnShowRule()));
+	m_pActionRule = tb->addAction(newIcon, QString::fromStdWString(L"显示标尺"), this, SLOT(OnShowRule()));
 	newIcon = QIcon(":/images/showgrid.png");
-	m_pActionGrid = tb->addAction(newIcon, tr("Show Grid"), this, SLOT(OnShowGrid()));
+	m_pActionGrid = tb->addAction(newIcon, QString::fromStdWString(L"显示网格"), this, SLOT(OnShowGrid()));
 }
 
 void CMainFrame::setupLockActions()
 {
-	QToolBar *tb = addToolBar(tr("Lock"));
+	QToolBar *tb = addToolBar(QString::fromStdWString(L"锁住图形"));
 	QIcon newIcon = QIcon(":/images/lock.png");
-	m_pActionLock = tb->addAction(newIcon, tr("Lock"), this, SLOT(OnLock()));
+	m_pActionLock = tb->addAction(newIcon, QString::fromStdWString(L"锁住"), this, SLOT(OnLock()));
 	newIcon = QIcon(":/images/unlock.png");
-	m_pActionUnLock = tb->addAction(newIcon, tr("Unlock"), this, SLOT(OnUnlock()));
+	m_pActionUnLock = tb->addAction(newIcon, QString::fromStdWString(L"解除锁住"), this, SLOT(OnUnlock()));
 }
 
 void CMainFrame::ShowMousePosition(QPoint pt)
@@ -635,8 +635,8 @@ void CMainFrame::OntextColor(QColor clr)
 
 void CMainFrame::setupHelp()
 {
-	QMenu *menu = menuBar()->addMenu(tr("Help(&H)"));
-	menu->addAction(tr("About(&A)"), this, SLOT(OnAbout()));
+	QMenu *menu = menuBar()->addMenu(QString::fromStdWString(L"帮助(&H)"));
+	menu->addAction(QString::fromStdWString(L"关于(&A)"), this, SLOT(OnAbout()));
 }
 
 void CMainFrame::OnAbout()
@@ -659,14 +659,14 @@ void CMainFrame::fileNew()
 {
 	CSVGView *psvgView = new CSVGView(this);
 
-	QString strNextText = tr("New File1");
+	QString strNextText = QString::fromStdWString(L"新建文件");
 	QString strText = m_pTabWidget->tabText(m_pTabWidget->count() - 2);
-	if (strText.indexOf(tr("New File")) >= 0)
+	if (strText.indexOf(QString::fromStdWString(L"新建文件")) >= 0)
 	{
 		QString strNumber = strText;
-		strNumber = strNumber.replace(tr("New File"), "");
+		strNumber = strNumber.replace(QString::fromStdWString(L"新建文件"), "");
 		int nNextNum = 1 + strNumber.toInt();
-		strNextText = tr("New File");
+		strNextText = QString::fromStdWString(L"新建文件");
 		strNextText += QString::number(nNextNum);
 	}
 	int nIndex = m_pTabWidget->insertTab(m_pTabWidget->count() - 1, psvgView, strNextText);
@@ -711,7 +711,7 @@ void CMainFrame::OpenFile(const QString &strPath)
 
 void CMainFrame::fileOpen()
 {
-	QFileDialog fileDialog(this, tr("Open File..."), ".", "svg(*.svg);;All(*.*)");
+	QFileDialog fileDialog(this, QString::fromStdWString(L"打开文件..."), ".", "svg(*.svg);;All(*.*)");
 	fileDialog.setAcceptMode(QFileDialog::AcceptOpen);
 	fileDialog.setFileMode(QFileDialog::ExistingFiles);
 	if (fileDialog.exec() != QDialog::Accepted)
@@ -1001,7 +1001,7 @@ void CMainFrame::rotate()
 
 void CMainFrame::createDockWindows()
 {
-	m_pPropertyDock = new QDockWidget(tr("Property View"), this);
+	m_pPropertyDock = new QDockWidget(QString::fromStdWString(L"属性视图"), this);
 	m_pPropertyDock->resize(500, 600);
 	m_pPropertyDock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
 	m_RightProperty = new CPanePropertyTableView(m_pPropertyDock);
@@ -1128,17 +1128,17 @@ void CMainFrame::OncustomContextMenuRequested(const QPoint& pt)
 					//////////////////////////////////////////////////////////////////////////
 					QActionGroup *closeTab = new QActionGroup(this);
 					connect(closeTab, &QActionGroup::triggered, this, &CMainFrame::OnCloseTab);
-					QAction *act = menu.addAction(tr("Close Document"));
+					QAction *act = menu.addAction(QString::fromStdWString(L"关闭文档"));
 					act->setData(i);
 					closeTab->addAction(act);
 					QActionGroup *closeAllTab = new QActionGroup(this);
 					connect(closeAllTab, &QActionGroup::triggered, this, &CMainFrame::OnCloseAllTab);
-					act = menu.addAction(tr("Close All Document"));
+					act = menu.addAction(QString::fromStdWString(L"关闭所有文档"));
 					act->setData(i);
 					closeAllTab->addAction(act);
 					QActionGroup *closeElseAllTab = new QActionGroup(this);
 					connect(closeElseAllTab, &QActionGroup::triggered, this, &CMainFrame::OnCloseRightTab);
-					act = menu.addAction(tr("Close Right Document"));
+					act = menu.addAction(QString::fromStdWString(L"关闭右边文档"));
 					act->setData(i);
 					closeElseAllTab->addAction(act);
 					//////////////////////////////////////////////////////////////////////////
@@ -1147,20 +1147,20 @@ void CMainFrame::OncustomContextMenuRequested(const QPoint& pt)
 						menu.addSeparator();
 						QActionGroup *findFolder = new QActionGroup(this);
 						connect(findFolder, &QActionGroup::triggered, this, &CMainFrame::OpenFolder);
-						act = menu.addAction(tr("Open directory"));
+						act = menu.addAction(QString::fromStdWString(L"打开目录"));
 						act->setData(pSVGView->m_EditPath.strFullPath);
 						findFolder->addAction(act);
 						//////////////////////////////////////////////////////////////////////////
 						QActionGroup *ActionOpenBydefault = new QActionGroup(this);
 						connect(ActionOpenBydefault, &QActionGroup::triggered, this, &CMainFrame::OpenByDefault);
-						act = menu.addAction(tr("Open with default program"));
+						act = menu.addAction(QString::fromStdWString(L"用默认程序打开"));
 						act->setData(pSVGView->m_EditPath.strFullPath);
 						ActionOpenBydefault->addAction(act);
 
 						//////////////////////////////////////////////////////////////////////////
 						QActionGroup *reload = new QActionGroup(this);
 						connect(reload, &QActionGroup::triggered, this, &CMainFrame::ReLoadFile);
-						QAction *actreload = menu.addAction(tr("Reload file"));
+						QAction *actreload = menu.addAction(QString::fromStdWString(L"重新加载"));
 						QVariant var = QVariant::fromValue((void *)pSVGView);
 						actreload->setData(var);
 						reload->addAction(actreload);
@@ -1710,13 +1710,13 @@ bool CMainFrame::ShowSaveMessage(QWidget *pWidget)
 			QString strLabel = pView->m_EditPath.strFullPath;
 			if (strLabel.length() == 0)
 			{
-				strLabel = tr("New File");
+				strLabel = QString::fromStdWString(L"新建文件");
 			}
-			QMessageBox box(QMessageBox::Warning, tr("Warning"), strLabel + tr("The file has been changed. Do you want to save it?"));
+			QMessageBox box(QMessageBox::Warning, QString::fromStdWString(L"警告"), strLabel + QString::fromStdWString(L"文件已经修改,是否保存?"));
 			box.setStandardButtons(QMessageBox::Save | QMessageBox::Discard | QMessageBox::Cancel);
-			box.setButtonText(QMessageBox::Save, tr("Save"));
-			box.setButtonText(QMessageBox::Discard, tr("Don't Save"));
-			box.setButtonText(QMessageBox::Cancel, tr("Cancel"));
+			box.setButtonText(QMessageBox::Save, QString::fromStdWString(L"保存"));
+			box.setButtonText(QMessageBox::Discard, QString::fromStdWString(L"不保存"));
+			box.setButtonText(QMessageBox::Cancel, QString::fromStdWString(L"取消"));
 			int ret = box.exec();
 			if (ret == QMessageBox::Save)
 			{

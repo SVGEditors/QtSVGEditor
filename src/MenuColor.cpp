@@ -2,11 +2,11 @@
 *
 * @license MIT
 *
-* @copyright: 2022 LinJi
+* @copyright: 2022 LJ
 *
-* @technical support: www.svgsvg.cn
+* @technical support: http://www.svgsvg.cn/support/tech/
 *
-* @email: 93681992@qq.com
+
 *
 * @module: QtSVGEditor
 *
@@ -95,7 +95,7 @@ void CMenuColor::init(int nType)
 	QWidgetAction* pMoreColorAction = new QWidgetAction(this);
 	pMoreColorAction->setData(QColor(Qt::transparent));
 	connect(pMoreColorAction, &QAction::triggered, this, &CMenuColor::OnMoreColor);
-	pMoreColorAction->setText(tr("more color"));
+	pMoreColorAction->setText(QString::fromStdWString(L"更多颜色"));
 	addAction(pMoreColorAction);
 
 	if (nType == 1)
@@ -104,14 +104,14 @@ void CMenuColor::init(int nType)
 		QWidgetAction* pRadientColorAction = new QWidgetAction(this);
 		pRadientColorAction->setData(QColor(Qt::transparent));
 		connect(pRadientColorAction, &QAction::triggered, this, &CMenuColor::OnRadient);
-		pRadientColorAction->setText(tr("gradual"));
+		pRadientColorAction->setText(QString::fromStdWString(L"渐变色填充"));
 		addAction(pRadientColorAction);
 
 		addSeparator();
 		QWidgetAction* pPatternAction = new QWidgetAction(this);
 		pPatternAction->setData(QColor(Qt::transparent));
 		connect(pPatternAction, &QAction::triggered, this, &CMenuColor::OnPattern);
-		pPatternAction->setText(tr("pattern"));
+		pPatternAction->setText(QString::fromStdWString(L"网纹填充"));
 		addAction(pPatternAction);
 	}
 }

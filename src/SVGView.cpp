@@ -2,11 +2,11 @@
 *
 * @license MIT
 *
-* @copyright: 2022 LinJi
+* @copyright: 2022 LJ
 *
-* @technical support: www.svgsvg.cn
+* @technical support: http://www.svgsvg.cn/support/tech/
 *
-* @email: 93681992@qq.com
+
 *
 * @module: QtSVGEditor
 *
@@ -589,44 +589,44 @@ void CSVGView::OnRButtonUp(QMouseEvent *pMouseEvent)
 
 	QMenu menu;
 	QIcon Icon = QIcon(":/images/editcopy.png");
-	menu.addAction(Icon, tr("copy"), this, SLOT(OnCopy()));
+	menu.addAction(Icon, QString::fromStdWString(L"复制"), this, SLOT(OnCopy()));
 	Icon = QIcon(":/images/editpaste.png");
-	menu.addAction(Icon, tr("paste"), this, SLOT(OnPaste()));
+	menu.addAction(Icon, QString::fromStdWString(L"粘贴"), this, SLOT(OnPaste()));
 	Icon = QIcon(":/images/delete.png");
-	menu.addAction(Icon, tr("delete"), this, SLOT(OnDel()));
+	menu.addAction(Icon, QString::fromStdWString(L"删除"), this, SLOT(OnDel()));
 	menu.addSeparator();
 	Icon = QIcon(":/images/editundo.png");
-	menu.addAction(Icon, tr("undo"), this, SLOT(OnUndo()));
+	menu.addAction(Icon, QString::fromStdWString(L"撤销"), this, SLOT(OnUndo()));
 	Icon = QIcon(":/images/editredo.png");
-	menu.addAction(Icon, tr("redo"), this, SLOT(OnRedo()));
+	menu.addAction(Icon, QString::fromStdWString(L"反撤销"), this, SLOT(OnRedo()));
 	menu.addSeparator();
 	Icon = QIcon(":/images/group.png");
-	menu.addAction(Icon, tr("group"), this, SLOT(OnGroup()));
+	menu.addAction(Icon, QString::fromStdWString(L"组合"), this, SLOT(OnGroup()));
 	Icon = QIcon(":/images/ungroup.png");
-	menu.addAction(Icon, tr("ungroup"), this, SLOT(OnUnGroup()));
+	menu.addAction(Icon, QString::fromStdWString(L"解除组合"), this, SLOT(OnUnGroup()));
 	menu.addSeparator();
 
-	QMenu * pSubMenu = menu.addMenu(tr("draw tool"));
+	QMenu * pSubMenu = menu.addMenu(QString::fromStdWString(L"绘制工具"));
 	Icon = QIcon(":/images/drawline.png");
-	pSubMenu->addAction(Icon, tr("line"), this, SLOT(OnDrawLine()));
+	pSubMenu->addAction(Icon, QString::fromStdWString(L"直线"), this, SLOT(OnDrawLine()));
 	Icon = QIcon(":/images/drawrect.png");
-	pSubMenu->addAction(Icon, tr("rect"), this, SLOT(OnDrawRect()));
+	pSubMenu->addAction(Icon, QString::fromStdWString(L"矩形"), this, SLOT(OnDrawRect()));
 	Icon = QIcon(":/images/drawcircle.png");
-	pSubMenu->addAction(Icon, tr("circle"), this, SLOT(OnDrawCircle()));
+	pSubMenu->addAction(Icon, QString::fromStdWString(L"圆"), this, SLOT(OnDrawCircle()));
 	Icon = QIcon(":/images/drawellipse.png");
-	pSubMenu->addAction(Icon, tr("ellipse"), this, SLOT(OnDrawEllipse()));
+	pSubMenu->addAction(Icon, QString::fromStdWString(L"椭圆"), this, SLOT(OnDrawEllipse()));
 	Icon = QIcon(":/images/drawpolyline.png");
-	pSubMenu->addAction(Icon, tr("polyline"), this, SLOT(OnDrawPolyline()));
+	pSubMenu->addAction(Icon, QString::fromStdWString(L"折线"), this, SLOT(OnDrawPolyline()));
 	Icon = QIcon(":/images/drawpolygon.png");
-	pSubMenu->addAction(Icon, tr("polygon"), this, SLOT(OnDrawPolygon()));
+	pSubMenu->addAction(Icon, QString::fromStdWString(L"多边形"), this, SLOT(OnDrawPolygon()));
 	Icon = QIcon(":/images/drawpath.png");
-	pSubMenu->addAction(Icon, tr("path"), this, SLOT(OnDrawPath()));
+	pSubMenu->addAction(Icon, QString::fromStdWString(L"贝塞尔曲线"), this, SLOT(OnDrawPath()));
 	Icon = QIcon(":/images/drawtext.png");
-	pSubMenu->addAction(Icon, tr("text"), this, SLOT(OnDrawText()));
+	pSubMenu->addAction(Icon, QString::fromStdWString(L"文本"), this, SLOT(OnDrawText()));
 	Icon = QIcon(":/images/drawimage.png");
-	pSubMenu->addAction(Icon, tr("image"), this, SLOT(OnDrawImage()));
+	pSubMenu->addAction(Icon, QString::fromStdWString(L"图片"), this, SLOT(OnDrawImage()));
 	Icon = QIcon(":/images/drawcontinue.png");
-	QAction  *pActionContinue = pSubMenu->addAction(Icon, tr("draw continue"), this, SLOT(OnDrawContinue()));
+	QAction  *pActionContinue = pSubMenu->addAction(Icon, QString::fromStdWString(L"继续绘制"), this, SLOT(OnDrawContinue()));
 	pActionContinue->setEnabled(false);
 	if (CanContinueDraw())
 	{
@@ -637,7 +637,7 @@ void CSVGView::OnRButtonUp(QMouseEvent *pMouseEvent)
 	CSVGElement *pElement = m_SVGDocument.GetAloneSelectElement(true);
 	if (pElement && pElement->getNodeType() == SVG_IMAGE)
 	{
-		menu.addAction(tr("replace image"), this, SLOT(OnReplaceImage()));
+		menu.addAction(QString::fromStdWString(L"替换图片"), this, SLOT(OnReplaceImage()));
 	}
 	menu.exec(pMouseEvent->globalPos());
 }
@@ -647,7 +647,7 @@ void CSVGView::OnReplaceImage()
 	CSVGElement *pElement = m_SVGDocument.GetAloneSelectElement(true);
 	if (pElement && pElement->getNodeType() == SVG_IMAGE)
 	{
-		QFileDialog fileDialog(this, tr("Open File..."), ".", tr("image (*.png *.jpg *.bmp);;All(*.*)"));
+		QFileDialog fileDialog(this, QString::fromStdWString(L"打开文件..."), ".", tr("image (*.png *.jpg *.bmp);;All(*.*)"));
 		fileDialog.setAcceptMode(QFileDialog::AcceptOpen);
 		fileDialog.setFileMode(QFileDialog::ExistingFile);
 		if (fileDialog.exec() != QDialog::Accepted)
@@ -873,7 +873,7 @@ bool CSVGView::SaveAs(QString &strName)
 {
 	bool bRet = false;
 	QString  strLstDir = tr("/newfile.svg");
-	QString fileName = QFileDialog::getSaveFileName(this, tr("save as"), strLstDir, QString::fromStdWString(L"svg(*.svg)"));
+	QString fileName = QFileDialog::getSaveFileName(this, QString::fromStdWString(L"另存为"), strLstDir, QString::fromStdWString(L"svg(*.svg)"));
 	m_EditPath.strFullPath = fileName;
 	if (m_EditPath.strFullPath.length() > 0)
 	{
@@ -889,7 +889,7 @@ bool CSVGView::SaveAs(QString &strName)
 
 void CSVGView::SaveAsPng()
 {
-	QString fileName = QFileDialog::getSaveFileName(this, tr("save as"), tr("new file"), QString::fromStdWString(L"png(*.png)"));
+	QString fileName = QFileDialog::getSaveFileName(this, QString::fromStdWString(L"另存为"), QString::fromStdWString(L"新文件"), QString::fromStdWString(L"png(*.png)"));
 	std::wstring strxml = m_SVGDocument.ToFileXml();
 	QImage image = CSVGDocument::SVGFileAsImage(strxml, L"png");
 	image.save(fileName);
@@ -897,7 +897,7 @@ void CSVGView::SaveAsPng()
 
 void CSVGView::SaveAsPng(int nwidth, int nheight)
 {
-	QString fileName = QFileDialog::getSaveFileName(this, tr("save as"), tr("new file"), QString::fromStdWString(L"png(*.png)"));
+	QString fileName = QFileDialog::getSaveFileName(this, QString::fromStdWString(L"另存为"), QString::fromStdWString(L"新文件"), QString::fromStdWString(L"png(*.png)"));
 	std::wstring strxml = m_SVGDocument.ToFileXml();
 	QImage image = CSVGDocument::SVGFileAsImage(strxml, L"png", nwidth, nheight);
 	image.save(fileName);
@@ -1042,7 +1042,7 @@ void CSVGView::OnDrawText()
 
 void CSVGView::OnDrawImage()
 {
-	QFileDialog fileDialog(this, tr("Open File..."), ".", tr("image (*.png *.jpg *.bmp);;All(*.*)"));
+	QFileDialog fileDialog(this, QString::fromStdWString(L"打开文件..."), ".", tr("image (*.png *.jpg *.bmp);;All(*.*)"));
 	fileDialog.setAcceptMode(QFileDialog::AcceptOpen);
 	fileDialog.setFileMode(QFileDialog::ExistingFile);
 	if (fileDialog.exec() != QDialog::Accepted)
@@ -1370,7 +1370,7 @@ void CSVGView::ResetProperty()
 			m_pMainFrame->m_RightProperty->ClearProperty();
 			m_lstsvgtype = 5000;
 		}
-		m_pMainFrame->m_RightProperty->AddHeadName(tr("canvas size"));
+		m_pMainFrame->m_RightProperty->AddHeadName(QString::fromStdWString(L"画布大小"));
 
 		CSVGElement *pSVGElement = m_SVGDocument.GetRootSVGElement();
 		if (pSVGElement)
@@ -1404,7 +1404,7 @@ void CSVGView::ResetProperty()
 		{
 			m_pMainFrame->m_RightProperty->ClearProperty();
 			std::wstring strTagName = pElement->getTagName();
-			QString strLabel = tr("graph property");
+			QString strLabel = QString::fromStdWString(L"图形属性");
 			strLabel += QString::fromStdWString(strTagName);
 			strLabel += ")";
 			m_pMainFrame->m_RightProperty->AddHeadName(strLabel);

@@ -3,11 +3,11 @@
 *
 * @license MIT
 *
-* @copyright: 2022 LinJi
+* @copyright: 2022 LJ
 *
-* @technical support: www.svgsvg.cn
+* @technical support: http://www.svgsvg.cn/support/tech/
 *
-* @email: 93681992@qq.com
+
 *
 * @module: QtSVGEditor
 *
@@ -1746,7 +1746,7 @@ void CSVGDocument::DrawHorGridLine(QPainter &painter)
 	{
 		nDistance = 200;
 	}
-	float fDistance = nDistance*1.0*fscale;
+	float fDistance = nDistance * 1.0*fscale;
 
 	QPolygon BoldPoints;
 	QPolygon ThinPoints;
@@ -1755,7 +1755,7 @@ void CSVGDocument::DrawHorGridLine(QPainter &painter)
 	{
 		for (int j = 0; j < 10; ++j)
 		{
-			int nxPt = i + j*(fDistance / 10);
+			int nxPt = i + j * (fDistance / 10);
 			if (nxPt < 20)
 				continue;
 			if (j == 0)
@@ -1777,7 +1777,7 @@ void CSVGDocument::DrawHorGridLine(QPainter &painter)
 	{
 		for (int j = 0; j < 10; ++j)
 		{
-			int nxPt = i + j*(fDistance / 10);
+			int nxPt = i + j * (fDistance / 10);
 			if (nxPt < 20)
 				continue;
 			if (j == 0)
@@ -1822,7 +1822,7 @@ void CSVGDocument::DrawVerGridLine(QPainter &painter)
 	{
 		nDistance = 200;
 	}
-	float fDistance = nDistance*1.0*fscale;
+	float fDistance = nDistance * 1.0*fscale;
 
 	QPolygon BoldPoints;
 	QPolygon ThinPoints;
@@ -1831,7 +1831,7 @@ void CSVGDocument::DrawVerGridLine(QPainter &painter)
 	{
 		for (int j = 0; j < 10; ++j)
 		{
-			int nyPt = i + j*(fDistance / 10);
+			int nyPt = i + j * (fDistance / 10);
 			if (nyPt < 20)
 				continue;
 			if (j == 0)
@@ -1853,7 +1853,7 @@ void CSVGDocument::DrawVerGridLine(QPainter &painter)
 	{
 		for (int j = 0; j < 10; ++j)
 		{
-			int nyPt = i + j*(fDistance / 10);
+			int nyPt = i + j * (fDistance / 10);
 			if (nyPt < 20)
 				continue;
 			if (j == 0)
@@ -1907,7 +1907,7 @@ void CSVGDocument::DrawHorizonRuler(QPainter &painter)
 	{
 		nDistance = 200;
 	}
-	float fDistance = nDistance*1.0*fscale;
+	float fDistance = nDistance * 1.0*fscale;
 
 	painter.setPen(Qt::black);
 	painter.setBrush(Qt::white);
@@ -1920,7 +1920,7 @@ void CSVGDocument::DrawHorizonRuler(QPainter &painter)
 	{
 		for (int j = 0; j < 10; ++j)
 		{
-			int nxPt = i + j*(fDistance / 10);
+			int nxPt = i + j * (fDistance / 10);
 			if (nxPt < 20)
 				continue;
 			int nyPt = 0;
@@ -1954,7 +1954,7 @@ void CSVGDocument::DrawHorizonRuler(QPainter &painter)
 	{
 		for (int j = 0; j < 10; ++j)
 		{
-			int nxPt = i + j*(fDistance / 10);
+			int nxPt = i + j * (fDistance / 10);
 			if (nxPt < 20)
 				continue;
 			int nyPt = 0;
@@ -1977,7 +1977,7 @@ void CSVGDocument::DrawHorizonRuler(QPainter &painter)
 		if (i >= 0)
 		{
 			painter.setBrush(Qt::black);
-			painter.drawText(QPoint(i, 14), QString::number(-nIndex*nDistance));
+			painter.drawText(QPoint(i, 14), QString::number(-nIndex * nDistance));
 		}
 		nIndex++;
 	}
@@ -2008,7 +2008,7 @@ void CSVGDocument::DrawVerticalRuler(QPainter &painter)
 	{
 		nDistance = 200;
 	}
-	float fDistance = nDistance*1.0*fscale;
+	float fDistance = nDistance * 1.0*fscale;
 
 	painter.setPen(Qt::black);
 	painter.setBrush(Qt::white);
@@ -2021,7 +2021,7 @@ void CSVGDocument::DrawVerticalRuler(QPainter &painter)
 	{
 		for (int j = 0; j < 10; ++j)
 		{
-			int nyPt = i + j*(fDistance / 10);
+			int nyPt = i + j * (fDistance / 10);
 			if (nyPt < 20)
 				continue;
 			int nxPt = 0;
@@ -2062,7 +2062,7 @@ void CSVGDocument::DrawVerticalRuler(QPainter &painter)
 	{
 		for (int j = 0; j < 10; ++j)
 		{
-			int nyPt = i + j*(fDistance / 10);
+			int nyPt = i + j * (fDistance / 10);
 			if (nyPt < 20)
 				continue;
 			int nxPt = 0;
@@ -2091,7 +2091,7 @@ void CSVGDocument::DrawVerticalRuler(QPainter &painter)
 			mat.rotate(90);
 			mat.translate(2, -(i + 2));
 			painter.setMatrix(mat);
-			painter.drawText(QPoint(2, i + 2), QString::number(-nIndex*nDistance));
+			painter.drawText(QPoint(2, i + 2), QString::number(-nIndex * nDistance));
 			painter.resetMatrix();
 		}
 		nIndex++;
@@ -6162,8 +6162,8 @@ QImage CSVGDocument::SVGFileAsImage(const std::wstring &strxml, const std::wstri
 			nScaleHeight = nheight;
 		}
 
-		float fscalex = nScaleWidth*1.0 / nwidth;
-		float fscaley = nScaleHeight*1.0 / nheight;
+		float fscalex = nScaleWidth * 1.0 / nwidth;
+		float fscaley = nScaleHeight * 1.0 / nheight;
 		float fscale = fscalex;
 		float foffsetx = 0;
 		float foffsety = 0;

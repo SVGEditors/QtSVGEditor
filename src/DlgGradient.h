@@ -2,11 +2,11 @@
 *
 * @license MIT
 *
-* @copyright: 2022 LinJi
+* @copyright: 2022 LJ
 *
-* @technical support: www.svgsvg.cn
+* @technical support: http://www.svgsvg.cn/support/tech/
 *
-* @email: 93681992@qq.com
+
 *
 * @module: QtSVGEditor
 *
@@ -59,7 +59,7 @@ public:
 	~CDlgGradient();
 	bool eventFilter(QObject *o, QEvent *e);
 	std::wstring GetXML();
-	public slots:
+public slots:
 	void OnColorMenu();
 	void OnColor(QColor clr);
 	void OnSlidervalueChanged(int value);

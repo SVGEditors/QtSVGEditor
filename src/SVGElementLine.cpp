@@ -2,11 +2,11 @@
 *
 * @license MIT
 *
-* @copyright: 2022 LinJi
+* @copyright: 2022 LJ
 *
-* @technical support: www.svgsvg.cn
+* @technical support: http://www.svgsvg.cn/support/tech/
 *
-* @email: 93681992@qq.com
+
 *
 * @module: QtSVGEditor
 *
@@ -151,8 +151,8 @@ void  CSVGElementLine::resetpatternPath(int nNewWidth, int nNewHeight)
 		calBBox();
 		m_bPathHasChanged = false;
 
-		float scalex = nNewWidth*1.0 / m_bbox.width + 0.00001;
-		float scaley = nNewHeight*1.0 / m_bbox.height + 0.00001;
+		float scalex = nNewWidth * 1.0 / m_bbox.width + 0.00001;
+		float scaley = nNewHeight * 1.0 / m_bbox.height + 0.00001;
 
 		m_bbox.x *= scalex;
 		m_bbox.y *= scaley;

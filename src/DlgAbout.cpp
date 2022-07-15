@@ -36,7 +36,7 @@ CDlgAbout::CDlgAbout()
 	pLabel2->setGeometry(QRect(100, 50, 450, 50));
 
 	QLabel* labelLink = new QLabel(this);
-	labelLink->setText("<a style=\"font-size:10pt\" href=\"http://www.svgsvg.cn/support/tech/\">http://www.svgsvg.cn/support/tech/</a>"));
+    labelLink->setText("<a style=\"font-size:10pt\" href=\"http://www.svgsvg.cn/support/tech/\">http://www.svgsvg.cn/support/tech/</a>");
 	labelLink->setGeometry(QRect(100, 80, 300, 50));
 
 	connect(m_ui.ButtonOK, SIGNAL(clicked()), this, SLOT(OnOK()));

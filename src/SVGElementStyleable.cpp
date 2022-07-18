@@ -51,7 +51,7 @@ CSVGElement* CSVGElementStyleable::cloneNode(bool deep)
 
 void  CSVGElementStyleable::ParseStyle(std::map<int, std::wstring>&stylemaps, const std::wstring& style)
 {
-	int nLen = style.length();
+	int nLen = (int)style.length();
 	wchar_t *pHeadChar = new wchar_t[nLen + 1];
 	std::wmemset(pHeadChar, 0, nLen + 1);
 	wmemcpy(pHeadChar, style.c_str(), nLen);
@@ -391,7 +391,7 @@ void CSVGElementStyleable::decodeStrokeDasharray(const std::wstring & data, floa
 	std::wstring delstr_ = L", ";
 	std::vector<std::wstring> retData;
 	retData = global.tokenize(datastr_, delstr_);
-	int nSize_ = retData.size();
+	int nSize_ = (int)retData.size();
 	int i = 0;
 	if (fwidth <= 0.01)
 	{

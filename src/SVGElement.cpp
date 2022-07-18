@@ -137,7 +137,7 @@ std::wstring CSVGElement::getNextSiblingId()
 
 unsigned int CSVGElement::getChildCount()
 {
-	return m_ChildNodes.size();
+	return (unsigned int)m_ChildNodes.size();
 }
 
 CSVGElement* CSVGElement::getChild(unsigned int index)
@@ -934,7 +934,7 @@ bool CSVGElement::IsLock()
 
 void CSVGElement::RemoveChildByTagNames(std::vector<std::wstring>&tagNames)
 {
-	for (int i = m_ChildNodes.size() - 1; i >= 0; --i)
+	for (int i = (int)m_ChildNodes.size() - 1; i >= 0; --i)
 	{
 		std::wstring strTagName = m_ChildNodes[i]->getTagName();
 		for (int j = 0; j < (int)tagNames.size(); ++j)
@@ -946,7 +946,7 @@ void CSVGElement::RemoveChildByTagNames(std::vector<std::wstring>&tagNames)
 			}
 		}
 	}
-	for (int i = m_ChildNodes.size() - 1; i >= 0; --i)
+	for (int i = (int)m_ChildNodes.size() - 1; i >= 0; --i)
 	{
 		m_ChildNodes[i]->RemoveChildByTagNames(tagNames);
 	}
@@ -962,7 +962,7 @@ void CSVGElement::RemoveAttrByName(std::vector<std::wstring>&attrNames)
 			setAttribute(attrNames[i], L"");
 		}
 	}
-	for (int i = m_ChildNodes.size() - 1; i >= 0; --i)
+	for (int i = (int)m_ChildNodes.size() - 1; i >= 0; --i)
 	{
 		m_ChildNodes[i]->RemoveAttrByName(attrNames);
 	}
@@ -983,7 +983,7 @@ void CSVGElement::RemoveAttrByKeyName(std::vector<std::wstring>&attrKeyNames)
 			}
 		}
 	}
-	for (int i = m_ChildNodes.size() - 1; i >= 0; --i)
+	for (int i = (int)m_ChildNodes.size() - 1; i >= 0; --i)
 	{
 		m_ChildNodes[i]->RemoveAttrByKeyName(attrKeyNames);
 	}
@@ -1032,7 +1032,7 @@ void CSVGElement::SetTwoPrecision()
 		strmat = mat.getText();
 		setAttribute(L"transform", strmat);
 	}
-	for (int i = m_ChildNodes.size() - 1; i >= 0; --i)
+	for (int i = (int)m_ChildNodes.size() - 1; i >= 0; --i)
 	{
 		m_ChildNodes[i]->SetTwoPrecision();
 	}

@@ -57,7 +57,7 @@ std::vector<std::wstring> CSVGElementStyle::GetClassNames()
 
 CSVGElementStyleClass *CSVGElementStyle::getClassByName(const std::wstring &name)
 {
-	for (int i = m_vcclass.size() - 1; i >= 0; --i)
+	for (int i = (int)m_vcclass.size() - 1; i >= 0; --i)
 	{
 		if (m_vcclass[i]->getName() == name)
 			return m_vcclass[i];
@@ -89,7 +89,7 @@ void   CSVGElementStyle::parseReady()
 
 void CSVGElementStyle::parserValue(const std::wstring & strValue)
 {
-	int nLen = strValue.length();
+	int nLen = (int)strValue.length();
 	wchar_t * pBeforeBuff = new wchar_t[nLen + 10];
 	wchar_t *pBuff = pBeforeBuff;
 	std::wmemset(pBuff, 0, nLen + 10);

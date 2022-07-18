@@ -362,7 +362,7 @@ std::vector<CSVGElementTextContent*> CSVGElementText::GetTextContentArray()
 		{
 			for (size_t j = 0; j < pElement->getChildCount(); ++j)
 			{
-				CSVGElement *pSpanChild = pElement->getChild(j);
+				CSVGElement *pSpanChild = pElement->getChild((unsigned int)j);
 				if (pSpanChild->getNodeType() == SVG_TEXTCONTENT)
 				{
 					ContentArr.push_back((CSVGElementTextContent*)pSpanChild);

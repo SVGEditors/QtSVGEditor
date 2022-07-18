@@ -488,9 +488,9 @@ SVGCOLORREF CSVGGlobal::StrToColor(const std::wstring &str)
 	int r = 0, g = 0, b = 0;
 	if (std::wcsncmp(str2.c_str(), L"rgb", 3) == 0 || std::wcsncmp(str2.c_str(), L"RGB", 3) == 0)
 	{
-		int npos1 = str2.find(L'(');
+		int npos1 = (int)str2.find(L'(');
 		npos1++;
-		int npos2 = str2.find(L')');
+		int npos2 = (int)str2.find(L')');
 		int nSize = npos2 - npos1 + 1;
 		if (nSize <= 0)
 			return SVGRGBA(0, 0, 0, 0);

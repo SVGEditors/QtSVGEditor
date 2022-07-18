@@ -158,7 +158,7 @@ void CSVGElementTextContent::resetTextPath(float nx, float ny)
 
 int CSVGElementTextContent::GetTextLength()
 {
-	int ntextlen = m_nodeValue.length();
+	int ntextlen = (int)m_nodeValue.length();
 	return ntextlen;
 }
 
@@ -178,7 +178,7 @@ void CSVGElementTextContent::FormatSpaceString()
 	if (m_nodeValue.length() > 0)
 	{
 		wchar_t *pText = NULL;
-		int nlen = m_nodeValue.length();
+		int nlen = (int)m_nodeValue.length();
 		pText = new wchar_t[nlen + 1];
 		std::wmemset(pText, 0, nlen + 1);
 		int nIndex = 0;

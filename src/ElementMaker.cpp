@@ -214,8 +214,8 @@ std::wstring CXMLMakerNode::GetNodeValue()
 	strValue = strValue.replace("TUYEDATAEND", "]]>");
 	if (strValue.indexOf("<![CDATA[") == 0)
 	{
-		strValue = strValue.right(strValue.length() - strlen("<![CDATA["));
-		strValue = strValue.left(strValue.length() - strlen("]]>"));
+		strValue = strValue.right((int)strValue.length() - (int)strlen("<![CDATA["));
+		strValue = strValue.left((int)strValue.length() - (int)strlen("]]>"));
 	}
 	return strValue.toStdWString();
 }

@@ -104,7 +104,7 @@ void CSVGElementPath::parseD(const wchar_t* value)
 	{
 		return;
 	}
-	int nLen = std::wcslen(value);
+	int nLen = (int)std::wcslen(value);
 	wchar_t *pChar = new wchar_t[nLen + 1];
 	std::wmemset(pChar, 0, nLen + 1);
 	wchar_t *pTemp = pChar;

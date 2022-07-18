@@ -6,7 +6,7 @@
 *
 * @technical support: http://www.svgsvg.cn/support/tech/
 *
-
+*
 *
 * @module: QtSVGEditor
 *
@@ -200,8 +200,8 @@ public:
 private:
 	void ClearEnd();
 	void ClearHistory();
-	int GetPos() const { return m_nPos; }
-	int GetTotal() const { return m_arActions.size(); }
+	int GetPos() const { return (int)m_nPos; }
+	int GetTotal() const { return (int)m_arActions.size(); }
 	std::vector<CActionBase*> m_arActions;
 	size_t m_nPos;
 };

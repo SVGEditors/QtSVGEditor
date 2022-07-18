@@ -46,7 +46,7 @@ CSVGElementG::~CSVGElementG()
 
 bool CSVGElementG::IsPtInShape(float fx, int fy, std::wstring &retgroupid, std::wstring &retshapeid)
 {
-	for (int i = m_ChildNodes.size() - 1; i >= 0; --i)
+	for (int i = (int)m_ChildNodes.size() - 1; i >= 0; --i)
 	{
 		if (m_ChildNodes[i]->IsShapeElement())
 		{

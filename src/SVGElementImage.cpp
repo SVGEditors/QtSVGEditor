@@ -198,7 +198,7 @@ std::wstring CSVGElementImage::GetEmbedImageData()
 		size_t nfind = xlinkhref.find(L"base64,");
 		if (nfind != std::wstring::npos)
 		{
-			int noffset = nfind + 7;
+			int noffset = (int)nfind + 7;
 			strdata = xlinkhref.substr(noffset, xlinkhref.length() - noffset);
 		}
 	}

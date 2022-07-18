@@ -237,7 +237,7 @@ void CSVGMatrix::setText(const std::wstring & Text)
 {
 	SetEmpty();
 	m_strtext = Text;
-	int nLen = m_strtext.length();
+	int nLen = (int)m_strtext.length();
 	wchar_t *pBeforeBuff = new wchar_t[nLen + 1];
 	std::wmemset(pBeforeBuff, 0, nLen + 1);
 	wchar_t *pBuff = pBeforeBuff;
@@ -284,7 +284,7 @@ void CSVGMatrix::parseMatrix(wchar_t *pText)
 	{
 		if (nCount == 0)
 		{
-			int nLen = std::wcslen(token);
+			int nLen = (int)std::wcslen(token);
 			if (nLen < 128)
 			{
 				std::wcsncpy(name, token, nLen);

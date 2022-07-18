@@ -280,7 +280,7 @@ CActionComposite::~CActionComposite()
 
 std::wstring CActionComposite::Undo()
 {
-	for (int i = m_Actions.size() - 1; i >= 0; --i)
+	for (size_t i = m_Actions.size() - 1; i >= 0; --i)
 	{
 		m_Actions[i]->Undo();
 	}
@@ -590,7 +590,7 @@ CActionUnGroup::CActionUnGroup(CSVGDocument *pIDoc, CSVGElement *pGElement)
 	m_pRemoveElement = pGElement;
 	for (size_t i = 0; i < pGElement->getChildCount(); ++i)
 	{
-		m_childnodes.push_back(pGElement->getChild(i));
+		m_childnodes.push_back(pGElement->getChild((unsigned int)i));
 	}
 }
 
@@ -631,7 +631,7 @@ std::wstring CActionUnGroup::Redo()
 {
 	for (size_t i = 0; i < m_pParentElement->getChildCount(); ++i)
 	{
-		CSVGElement *pGElement = m_pParentElement->getChild(i);
+		CSVGElement *pGElement = m_pParentElement->getChild((unsigned int)i);
 		if (pGElement == m_pGElement)
 		{
 			CSVGElement *pBeforeElement = m_pGElement;

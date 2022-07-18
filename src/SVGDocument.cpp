@@ -520,7 +520,7 @@ std::wstring  CSVGDocument::Toxml()
 		CSVGElement *pRoot = mydoc.GetRootSVGElement();
 		std::vector<CSVGElement *>vcNodes = pRoot->m_ChildNodes;
 		pRoot->m_ChildNodes.clear();
-		for (int i = vcNodes.size() - 1; i >= 0; --i)
+		for (int i = (int)vcNodes.size() - 1; i >= 0; --i)
 		{
 			CSVGElement *pChild = vcNodes[i];
 			if (pChild->IsShapeElement())
@@ -984,7 +984,7 @@ void  CSVGDocument::buildIdElement(CSVGElement *pElement, const std::wstring &id
 {
 	if (!m_bCanBuildIdmap)
 		return;
-	int nPos = id.find(L"_");
+	int nPos = (int)id.find(L"_");
 	if (nPos >= 0)
 	{
 		std::wstring strright = id.substr(nPos + 1, id.length() - nPos - 1);
@@ -1041,7 +1041,7 @@ void CSVGDocument::getShapeShape(CSVGElementShape *pParent, float fx, float fy, 
 		pretShape = pParent;
 		return;
 	}
-	for (int i = pParent->m_ChildNodes.size() - 1; i >= 0; --i)
+	for (int i = (int)pParent->m_ChildNodes.size() - 1; i >= 0; --i)
 	{
 		if (pParent->m_ChildNodes[i]->IsShapeElement())
 		{
@@ -1119,7 +1119,7 @@ std::wstring CSVGDocument::GetLayerUp(CSVGElement *pElement)
 		{
 			return strid;
 		}
-		for (int i = pParent->m_ChildNodes.size() - 1; i >= 0; --i)
+		for (int i = (int)pParent->m_ChildNodes.size() - 1; i >= 0; --i)
 		{
 			if (pParent->m_ChildNodes[i] != pElement)
 			{
@@ -1194,7 +1194,7 @@ std::wstring CSVGDocument::GetLayerDown(CSVGElement *pElement)
 
 		CSVGRectF matbbox = pShape->getMatrixBBox();
 		bool bLocationChild = false;
-		for (int i = pParent->m_ChildNodes.size() - 1; i >= 0; --i)
+		for (int i = (int)pParent->m_ChildNodes.size() - 1; i >= 0; --i)
 		{
 			if (pParent->m_ChildNodes[i] == pShape && bLocationChild == false)
 			{
@@ -1452,14 +1452,14 @@ void IsInRoot(CSVGElement *pParent, CSVGElement *pElement, bool &bExist)
 		return;
 	for (size_t i = 0; i < pParent->getChildCount(); ++i)
 	{
-		if (pParent->getChild(i) == pElement)
+		if (pParent->getChild((unsigned int)i) == pElement)
 		{
 			bExist = true;
 			break;
 		}
 		else
 		{
-			IsInRoot(pParent->getChild(i), pElement, bExist);
+			IsInRoot(pParent->getChild((unsigned int)i), pElement, bExist);
 		}
 	}
 }
@@ -1561,7 +1561,7 @@ void CSVGDocument::AddElementToArea(CSVGElementShape *pElement)
 	{
 		for (size_t i = 0; i < pElement->getChildCount(); ++i)
 		{
-			CSVGElement* pChild = pElement->getChild(i);
+			CSVGElement* pChild = pElement->getChild((unsigned int)i);
 			if (pChild->IsShapeElement())
 			{
 				if (pChild->IsShow())
@@ -2331,7 +2331,7 @@ void  CSVGDocument::RepairNameSpace()
 		std::set<std::wstring>::iterator iter = vcname.begin();
 		for (; iter != vcname.end(); ++iter)
 		{
-			int npos = (*iter).find(':');
+			int npos = (int)(*iter).find(':');
 			if (npos > 0)
 			{
 				std::wstring strprefix = (*iter).substr(0, npos);
@@ -4705,7 +4705,7 @@ CActionComposite * CSVGDocument::Paste(const std::wstring &str)
 			m_ActionHistory.AddAction(pComposite);
 			CActionValue *pActionVal = new CActionValue(this, pElement);
 			pComposite->PushBack(pActionVal);
-			int nLength = str.length();
+			int nLength = (int)str.length();
 			CSVGElementText *pTextElement = (CSVGElementText*)pElement;
 			std::wstring strnodeval = pTextElement->getNodeValue();
 			QString strVal = QString::fromStdWString(strnodeval);
@@ -6003,7 +6003,7 @@ void CSVGDocument::InputText(const std::wstring &strText)
 	{
 		CActionValue *pActionVal = new CActionValue(this, pElement);
 		m_ActionHistory.AddAction(pActionVal);
-		int nLength = strText.length();
+		int nLength = (int)strText.length();
 		CSVGElementText *pTextElement = (CSVGElementText*)pElement;
 		std::wstring strnodeval = pTextElement->getNodeValue();
 		QString strVal = QString::fromStdWString(strnodeval);
@@ -6300,7 +6300,7 @@ std::list<CSVGPointF> CSVGDocument::FormatToRegularPolygon(const std::list<CSVGP
 	{
 		ptCenter = CSVGPointF(fx2, fy2);
 	}
-	retpts = GetRegularPoints(ptCenter, pt1, retpts.size());
+	retpts = GetRegularPoints(ptCenter, pt1, (int)retpts.size());
 
 	return retpts;
 }
